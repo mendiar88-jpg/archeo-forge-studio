@@ -1,0 +1,26 @@
+const ArchitectSection = () => (
+  <section id="architect" className="py-24 bg-background">
+    <div className="container mx-auto px-4 max-w-3xl">
+      <h2 className="font-serif text-3xl md:text-4xl text-bone mb-2">The Architect</h2>
+      <p className="font-mono text-xs tracking-[0.2em] uppercase text-gold mb-10">INTJ-A</p>
+
+      <div className="border border-border p-8 md:p-12 bg-stone relative">
+        <div className="absolute top-0 left-0 w-16 h-px bg-gold" />
+        <div className="absolute top-0 left-0 h-16 w-px bg-gold" />
+
+        <p className="text-sm md:text-base text-bone-dim leading-loose">
+          As an Architect (INTJ-A), my natural focus is system optimization. I possess a combination of strategic
+          vision and technical pragmatism. I do not just execute tasks; I design workflows so that execution is
+          flawless, based on logic, autonomy, and continuous process improvement (Kaizen). My background bridges the
+          rigorous physical order of Archival Science with the high-velocity demands of modern Global Business
+          Operations and AI Automation.
+        </p>
+
+        <div className="absolute bottom-0 right-0 w-16 h-px bg-gold" />
+        <div className="absolute bottom-0 right-0 h-16 w-px bg-gold" />
+      </div>
+    </div>
+  </section>
+);
+
+export default ArchitectSection;
