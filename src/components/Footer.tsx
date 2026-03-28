@@ -10,7 +10,7 @@ const Footer = () => (
           href="https://www.linkedin.com/in/mendiar88"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 font-mono text-xs text-bone-dim hover-gold transition-colors"
+          className="flex items-center gap-2 font-mono text-xs text-bone-dim hover:text-[hsl(185,100%,50%)] transition-colors"
         >
           <Linkedin size={16} /> LinkedIn
         </a>
@@ -18,13 +18,13 @@ const Footer = () => (
           href="https://wa.me/573133339924"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 font-mono text-xs text-bone-dim hover-gold transition-colors"
+          className="flex items-center gap-2 font-mono text-xs text-bone-dim hover:text-[hsl(185,100%,50%)] transition-colors"
         >
           <Phone size={16} /> +57 313 333 9924
         </a>
         <a
           href="mailto:mendiar88@proton.me"
-          className="flex items-center gap-2 font-mono text-xs text-bone-dim hover-gold transition-colors"
+          className="flex items-center gap-2 font-mono text-xs text-bone-dim hover:text-[hsl(185,100%,50%)] transition-colors"
         >
           <Mail size={16} /> mendiar88@proton.me
         </a>

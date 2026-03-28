@@ -6,7 +6,7 @@ import AtheneumSection from "@/components/AtheneumSection";
 import Footer from "@/components/Footer";
 
 const Index = () => (
-  <div className="min-h-screen bg-background">
+  <div className="min-h-screen bg-background crt-overlay noise-bg">
     <Navbar />
     <HeroSection />
     <ArchitectSection />
