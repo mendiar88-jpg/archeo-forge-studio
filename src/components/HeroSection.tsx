@@ -34,7 +34,7 @@ const HeroSection = () => (
         <a href="#contact" className="btn-terminal btn-terminal-gold">
           Contact Me
         </a>
-        <a href="#" className="btn-terminal">
+        <a href="/Diego_Armando_Mendez_Resume.pdf" download className="btn-terminal">
           Download ATS Resume
         </a>
       </div>
