@@ -13,9 +13,9 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <a href="#home" className="font-serif text-lg tracking-widest text-gold">
+        <a href="#home" className="font-serif text-lg tracking-widest neon-text-gold">
           D.A.M.
         </a>
 
@@ -25,7 +25,7 @@ const Navbar = () => {
             <a
               key={l.href}
               href={l.href}
-              className="font-mono text-xs tracking-[0.2em] uppercase text-bone-dim hover-gold transition-colors duration-300"
+              className="font-mono text-xs tracking-[0.2em] uppercase text-bone-dim hover:text-[hsl(185,100%,50%)] transition-colors duration-300"
             >
               {l.label}
             </a>
@@ -40,13 +40,13 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-background border-b border-border">
+        <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border">
           {navLinks.map((l) => (
             <a
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="block px-6 py-3 font-mono text-xs tracking-[0.2em] uppercase text-bone-dim hover-gold transition-colors border-b border-border"
+              className="block px-6 py-3 font-mono text-xs tracking-[0.2em] uppercase text-bone-dim hover:text-[hsl(185,100%,50%)] transition-colors border-b border-border"
             >
               {l.label}
             </a>
