@@ -5,6 +5,7 @@ const navLinks = [
   { label: "Home", href: "#home" },
   { label: "The Architect", href: "#architect" },
   { label: "The Forge", href: "#forge" },
+  { label: "The Nexus", href: "#nexus" },
   { label: "The Atheneum", href: "#atheneum" },
   { label: "Contact", href: "#contact" },
 ];
@@ -15,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <a href="#home" className="font-serif text-lg tracking-widest neon-text-gold">
+        <a href="#home" className="font-serif text-lg tracking-widest neon-text-gold bloom-gold">
           D.A.M.
         </a>
 
@@ -25,7 +26,7 @@ const Navbar = () => {
             <a
               key={l.href}
               href={l.href}
-              className="font-mono text-xs tracking-[0.2em] uppercase text-bone-dim hover:text-[hsl(185,100%,50%)] transition-colors duration-300"
+              className="font-mono text-xs tracking-[0.2em] uppercase text-bone-dim hover:text-accent hover:text-shadow-cyan transition-all duration-300"
             >
               {l.label}
             </a>
@@ -46,7 +47,7 @@ const Navbar = () => {
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="block px-6 py-3 font-mono text-xs tracking-[0.2em] uppercase text-bone-dim hover:text-[hsl(185,100%,50%)] transition-colors border-b border-border"
+              className="block px-6 py-3 font-mono text-xs tracking-[0.2em] uppercase text-bone-dim hover:text-accent transition-colors border-b border-border"
             >
               {l.label}
             </a>
