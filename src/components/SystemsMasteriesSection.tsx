@@ -11,20 +11,24 @@ const skillDescriptions: Record<string, string> = {
   "Escalation Management": "[STATUS: ACTIVE] - Routing and resolving escalated cases through tiered support hierarchies.",
   "Multichannel Support (Voice, Email, Chat)": "[STATUS: ACTIVE] - Delivering seamless support across all communication channels.",
   "Customer Onboarding": "[STATUS: ACTIVE] - Designing and executing onboarding workflows for maximum client retention.",
-  "AI Workflow Automation": "[STATUS: ACTIVE] - Deploying AI-assisted pipelines to eliminate manual bottlenecks in operations.",
-  "Vibe Coding": "[STATUS: ACTIVE] - Deploying AI-assisted code structures for process optimization.",
+  "AI Workflow Automation": "[STATUS: DEVELOPING] - Deploying AI-assisted pipelines to eliminate manual bottlenecks in operations.",
+  "Vibe Coding": "[STATUS: DEVELOPING] - Deploying AI-assisted code structures for process optimization.",
   "ChatGPT/Claude AI Integration": "[STATUS: ACTIVE] - Leveraging large language models for internal tool development and automation.",
   "CRM Administration (Salesforce, Oracle, Zendesk)": "[STATUS: ACTIVE] - Configuring and maintaining CRM platforms for enterprise-grade operations.",
-  "Microsoft Excel (Expert/Macros)": "[STATUS: ACTIVE] - Building automated spreadsheet workflows with advanced formulas and VBA macros.",
+  "Microsoft Excel (Expert/Macros)": "[STATUS: EXPERT] - Building automated spreadsheet workflows with advanced formulas and VBA macros.",
   "Notion Architecture": "[STATUS: ACTIVE] - Designing knowledge management systems and collaboration frameworks in Notion.",
   "WFM Applications": "[STATUS: ACTIVE] - Utilizing Workforce Management tools for scheduling and resource optimization.",
-  "Information Governance": "[STATUS: ACTIVE] - Implementing data governance frameworks aligned with regulatory standards.",
-  "Records Management": "[STATUS: ACTIVE] - Administering records lifecycle from creation to disposition per archival protocols.",
-  "HIPAA Compliance": "[STATUS: ACTIVE] - Ensuring Protected Health Information handling meets federal healthcare regulations.",
+  "Information Governance": "[STATUS: EXPERT] - Implementing data governance frameworks aligned with regulatory standards.",
+  "Records Management": "[STATUS: EXPERT] - Administering records lifecycle from creation to disposition per archival protocols.",
+  "HIPAA Compliance": "[STATUS: DEVELOPING] - Ensuring Protected Health Information handling meets federal healthcare regulations.",
   "PII Data Privacy": "[STATUS: ACTIVE] - Enforcing personally identifiable information protection across all data touchpoints.",
   "Legal Document Administration": "[STATUS: ACTIVE] - Managing legal records with chain-of-custody integrity and regulatory compliance.",
-  "Archival Science Standards (ISAD(G), ISAAR)": "[STATUS: ACTIVE] - Applying international archival description standards to information systems.",
+  "Archival Science Standards (ISAD(G), ISAAR)": "[STATUS: EXPERT] - Applying international archival description standards to information systems.",
   "Eligibility Verification": "[STATUS: ACTIVE] - Verifying patient and client eligibility through CPT codes and insurance plan protocols.",
+  "Project Management": "[STATUS: DEVELOPING] - Coordinating cross-functional teams and deliverables across operational timelines.",
+  "Financial Market Analysis": "[STATUS: DEVELOPING] - Analyzing Forex and Equities trends through a praxeological lens.",
+  "Spanish (Native)": "[STATUS: EXPERT] - Native-level proficiency across all professional and technical domains.",
+  "English (C1 Proficiency)": "[STATUS: ACTIVE] - Advanced bilingual operations across U.S. enterprise clients.",
 };
 
 const categories = [
@@ -35,14 +39,14 @@ const categories = [
     highlight: "10+ Years of Multi-sectoral Experience",
     color: "gold" as const,
     skills: [
-      { name: "Customer Success Management", level: 95 },
-      { name: "Case Management", level: 92 },
-      { name: "SLA Compliance", level: 90 },
-      { name: "QA Metrics", level: 88 },
-      { name: "KPI Tracking (AHT, CSAT, FCR)", level: 90 },
-      { name: "Escalation Management", level: 88 },
-      { name: "Multichannel Support (Voice, Email, Chat)", level: 93 },
-      { name: "Customer Onboarding", level: 85 },
+      { name: "Customer Success Management", level: 85 },
+      { name: "Case Management", level: 85 },
+      { name: "SLA Compliance", level: 85 },
+      { name: "QA Metrics", level: 80 },
+      { name: "KPI Tracking (AHT, CSAT, FCR)", level: 85 },
+      { name: "Escalation Management", level: 85 },
+      { name: "Multichannel Support (Voice, Email, Chat)", level: 90 },
+      { name: "Customer Onboarding", level: 80 },
     ],
   },
   {
@@ -53,13 +57,13 @@ const categories = [
     color: "cyan" as const,
     aiEnhanced: true,
     skills: [
-      { name: "AI Workflow Automation", level: 88 },
-      { name: "Vibe Coding", level: 85 },
-      { name: "ChatGPT/Claude AI Integration", level: 90 },
-      { name: "CRM Administration (Salesforce, Oracle, Zendesk)", level: 87 },
-      { name: "Microsoft Excel (Expert/Macros)", level: 92 },
-      { name: "Notion Architecture", level: 88 },
-      { name: "WFM Applications", level: 82 },
+      { name: "AI Workflow Automation", level: 65 },
+      { name: "Vibe Coding", level: 60 },
+      { name: "ChatGPT/Claude AI Integration", level: 70 },
+      { name: "CRM Administration (Salesforce, Oracle, Zendesk)", level: 85 },
+      { name: "Microsoft Excel (Expert/Macros)", level: 95 },
+      { name: "Notion Architecture", level: 80 },
+      { name: "WFM Applications", level: 75 },
     ],
   },
   {
@@ -69,13 +73,13 @@ const categories = [
     highlight: null,
     color: "cyan" as const,
     skills: [
-      { name: "Information Governance", level: 90 },
-      { name: "Records Management", level: 92 },
-      { name: "HIPAA Compliance", level: 88 },
-      { name: "PII Data Privacy", level: 90 },
-      { name: "Legal Document Administration", level: 87 },
-      { name: "Archival Science Standards (ISAD(G), ISAAR)", level: 85 },
-      { name: "Eligibility Verification", level: 86 },
+      { name: "Information Governance", level: 92 },
+      { name: "Records Management", level: 95 },
+      { name: "HIPAA Compliance", level: 65 },
+      { name: "PII Data Privacy", level: 85 },
+      { name: "Legal Document Administration", level: 85 },
+      { name: "Archival Science Standards (ISAD(G), ISAAR)", level: 93 },
+      { name: "Eligibility Verification", level: 75 },
     ],
   },
 ];
@@ -99,18 +103,45 @@ const SkillTag = ({
   </span>
 );
 
-const ProgressBar = ({ level, color }: { level: number; color: "gold" | "cyan" }) => (
-  <div className="h-1 w-full bg-secondary rounded-full overflow-hidden">
-    <div
-      className={`h-full rounded-full transition-all duration-1000 ease-out ${
-        color === "gold"
-          ? "bg-primary shadow-[0_0_8px_hsl(43_90%_55%_/_0.4)]"
-          : "bg-accent shadow-[0_0_8px_hsl(185_100%_50%_/_0.4)]"
-      }`}
-      style={{ width: `${level}%` }}
-    />
-  </div>
-);
+const DigitalMeter = ({ level, color, name }: { level: number; color: "gold" | "cyan"; name: string }) => {
+  const segments = 20;
+  const filledSegments = Math.round((level / 100) * segments);
+  const isGold = color === "gold";
+  const tierLabel = level >= 90 ? "EXPERT" : level >= 80 ? "ADVANCED" : "DEVELOPING";
+
+  return (
+    <div className="group">
+      <div className="flex justify-between items-center mb-1.5">
+        <span className="font-mono text-[10px] text-bone-dim truncate mr-2">{name}</span>
+        <div className="flex items-center gap-2 shrink-0">
+          <span className={`font-mono text-[9px] tracking-wider ${
+            level >= 90 ? "neon-text-gold" : level >= 80 ? "neon-text-cyan" : "text-bone-dim"
+          }`}>
+            {tierLabel}
+          </span>
+          <span className={`font-mono text-xs font-bold ${isGold ? "neon-text-gold" : "neon-text-cyan"}`}>
+            {level}%
+          </span>
+        </div>
+      </div>
+      <div className="flex gap-[2px] h-2">
+        {Array.from({ length: segments }).map((_, i) => (
+          <div
+            key={i}
+            className={`flex-1 rounded-[1px] transition-all duration-500 ${
+              i < filledSegments
+                ? isGold
+                  ? "bg-primary shadow-[0_0_4px_hsl(43_90%_55%_/_0.5)]"
+                  : "bg-accent shadow-[0_0_4px_hsl(185_100%_50%_/_0.5)]"
+                : "bg-secondary/60"
+            }`}
+            style={{ transitionDelay: `${i * 30}ms` }}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const SystemsMasteriesSection = () => {
   const [terminalText, setTerminalText] = useState(
@@ -129,8 +160,11 @@ const SystemsMasteriesSection = () => {
         <h2 className="font-serif text-3xl md:text-4xl text-bone mb-2">
           Systems &amp; Masteries
         </h2>
-        <p className="font-mono text-xs tracking-[0.2em] uppercase neon-text-cyan mb-12">
+        <p className="font-mono text-xs tracking-[0.2em] uppercase neon-text-cyan mb-2">
           Skill Architecture
+        </p>
+        <p className="font-mono text-[10px] text-bone-dim mb-12 max-w-2xl">
+          Continuously evolving. Currently integrating LLMs and AI agents into legacy operational frameworks.
         </p>
 
         <div className="grid md:grid-cols-3 gap-6 mb-10">
@@ -141,9 +175,7 @@ const SystemsMasteriesSection = () => {
                 <div className="flex items-center gap-3 mb-1">
                   <Icon
                     size={18}
-                    className={
-                      cat.color === "gold" ? "neon-text-gold" : "neon-text-cyan"
-                    }
+                    className={cat.color === "gold" ? "neon-text-gold" : "neon-text-cyan"}
                   />
                   <h3 className="font-serif text-lg text-bone">{cat.title}</h3>
                 </div>
@@ -159,25 +191,9 @@ const SystemsMasteriesSection = () => {
                   </div>
                 )}
 
-                <div className="space-y-3 mb-5">
+                <div className="space-y-4 mb-5">
                   {cat.skills.map((s) => (
-                    <div key={s.name}>
-                      <div className="flex justify-between items-center mb-1">
-                        <span className="font-mono text-[10px] text-bone-dim truncate mr-2">
-                          {s.name}
-                        </span>
-                        <span
-                          className={`font-mono text-[10px] ${
-                            cat.color === "gold"
-                              ? "neon-text-gold"
-                              : "neon-text-cyan"
-                          }`}
-                        >
-                          {s.level}%
-                        </span>
-                      </div>
-                      <ProgressBar level={s.level} color={cat.color} />
-                    </div>
+                    <DigitalMeter key={s.name} level={s.level} color={cat.color} name={s.name} />
                   ))}
                 </div>
 
