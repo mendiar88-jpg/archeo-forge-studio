@@ -36,7 +36,7 @@ const roles = [
 ];
 
 const ForgeSection = () => (
-  <section id="forge" className="py-24 bg-stone-dark">
+  <section id="forge" className="py-24 bg-stone-dark metallic-bg oil-texture relative">
     <ScrollRevealWrapper className="container mx-auto px-4 max-w-4xl">
       <h2 className="font-serif text-3xl md:text-4xl text-bone mb-2">The Forge</h2>
       <p className="font-mono text-xs tracking-[0.2em] uppercase neon-text-cyan mb-12">Professional Experience</p>
