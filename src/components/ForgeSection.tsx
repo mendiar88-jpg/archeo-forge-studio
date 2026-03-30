@@ -43,7 +43,7 @@ const ForgeSection = () => (
 
       <div className="relative border-l border-border pl-8 space-y-12">
         {roles.map((role, i) => (
-          <div key={i} className="relative glass-card p-6 md:p-8 rounded-sm">
+          <div key={i} className="relative glass-card p-6 md:p-8 rounded-sm circuit-border pulse-glow">
             <div className="absolute -left-[41px] top-6 w-3 h-3 border-2 border-accent bg-background rounded-full shadow-[0_0_8px_hsl(185_100%_50%_/_0.4)]" />
             <p className="font-mono text-xs neon-text-cyan mb-1">{role.date}</p>
             <h3 className="font-serif text-xl md:text-2xl text-bone mb-1">{role.title}</h3>
