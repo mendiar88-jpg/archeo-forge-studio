@@ -93,7 +93,7 @@ const AtheneumSection = () => {
           {articles.map((a, i) => {
             const Icon = a.icon;
             return (
-              <article key={i} className="group glass-card p-6 rounded-sm flex flex-col circuit-border">
+              <article key={i} className="group glass-card p-4 rounded-sm flex flex-col circuit-border">
                 <div className="flex items-center gap-3 mb-4">
                   <Icon size={18} className="neon-text-cyan shrink-0" />
                   <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-bone-dim">{a.tag}</span>
