@@ -184,7 +184,7 @@ const ForgeSection = () => {
           <div className="p-4 md:p-6">
             {/* ─── SERVICE LOGS TAB ─── */}
             {activeTab === "service-logs" && (
-              <div className="space-y-10">
+              <div className="space-y-4">
                 {/* Historical node */}
                 <div className="px-3 py-2 border-l-2 border-primary/50 bg-primary/5">
                   <p className="font-mono text-[10px] text-bone-dim leading-relaxed">
