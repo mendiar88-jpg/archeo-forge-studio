@@ -204,8 +204,8 @@ const ForgeSection = () => {
                       <p className="font-mono text-xs text-bone-dim mb-3">{role.company}</p>
                       <ul className="space-y-2">
                         {role.bullets.map((b, j) => (
-                          <li key={j} className="flex gap-3 text-xs text-bone-dim leading-relaxed">
-                            <span className="neon-text-cyan mt-1 shrink-0">▸</span>
+                          <li key={j} className="flex gap-2 text-xs text-bone-dim leading-tight">
+                            <span className="neon-text-cyan mt-0.5 shrink-0">▸</span>
                             <span>{b}</span>
                           </li>
                         ))}
