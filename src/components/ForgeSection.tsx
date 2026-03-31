@@ -153,7 +153,7 @@ const ForgeSection = () => {
   const [legacyOpen, setLegacyOpen] = useState(false);
 
   return (
-    <section id="forge" className="py-16 bg-stone-dark metallic-bg oil-texture relative">
+    <section id="forge" className="py-4 bg-stone-dark metallic-bg oil-texture relative">
       <ScrollRevealWrapper className="container mx-auto px-4 max-w-5xl">
         {/* Header - compact */}
         <h2 className="font-serif text-3xl md:text-4xl text-bone mb-1">The Forge</h2>
