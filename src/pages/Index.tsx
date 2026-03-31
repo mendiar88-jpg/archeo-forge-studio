@@ -4,8 +4,6 @@ import HeroSection from "@/components/HeroSection";
 import ForgeSection from "@/components/ForgeSection";
 import ArchitectSection from "@/components/ArchitectSection";
 import AtheneumSection from "@/components/AtheneumSection";
-import SystemsMasteriesSection from "@/components/SystemsMasteriesSection";
-import NexusSection from "@/components/NexusSection";
 import Footer from "@/components/Footer";
 import LoadingScreen from "@/components/LoadingScreen";
 
@@ -21,8 +19,6 @@ const Index = () => {
       <HeroSection />
       <ArchitectSection />
       <ForgeSection />
-      <SystemsMasteriesSection />
-      <NexusSection />
       <AtheneumSection />
       <Footer />
     </div>
