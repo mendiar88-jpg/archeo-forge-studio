@@ -3,14 +3,14 @@ import ScrollRevealWrapper from "@/components/ScrollRevealWrapper";
 import ContactForm from "@/components/ContactForm";
 
 const Footer = () => (
-  <footer id="contact" className="py-16 bg-stone-dark border-t border-border relative">
+  <footer id="contact" className="py-6 bg-stone-dark border-t border-border relative">
     {/* Corner accents */}
     <div className="absolute top-0 left-0 w-16 h-16 border-l border-t border-[hsl(var(--neon-crimson))]/20" />
     <div className="absolute top-0 right-0 w-16 h-16 border-r border-t border-accent/20" />
 
     <ScrollRevealWrapper className="container mx-auto px-4 max-w-4xl">
       <h2 className="font-serif text-2xl text-bone mb-2 text-center">Contact</h2>
-      <p className="font-mono text-[10px] tracking-[0.2em] uppercase neon-text-cyan mb-10 text-center">
+      <p className="font-mono text-[10px] tracking-[0.2em] uppercase neon-text-cyan mb-4 text-center">
         Communication Nexus
       </p>
 
@@ -28,7 +28,7 @@ const Footer = () => (
 
       <ContactForm />
 
-      <div className="text-center mt-12">
+      <div className="text-center mt-6">
         <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-bone-dim">
           © {new Date().getFullYear()} Diego Armando Méndez — Built with precision.
         </p>

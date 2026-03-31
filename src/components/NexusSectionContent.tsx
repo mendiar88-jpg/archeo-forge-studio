@@ -204,7 +204,7 @@ const NexusSectionContent = () => {
   return (
     <div>
       {/* Terminal Search Bar */}
-      <div className="glass-card rounded-sm mb-6 overflow-hidden">
+      <div className="glass-card rounded-sm mb-3 overflow-hidden">
         <div className="flex items-center gap-2 px-4 py-1.5 bg-secondary/80 border-b border-border">
           <div className="w-2 h-2 rounded-full bg-destructive" />
           <div className="w-2 h-2 rounded-full bg-primary" />
@@ -223,8 +223,36 @@ const NexusSectionContent = () => {
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-5">
-        <div className="space-y-5">
+      {/* Infrastructure Node */}
+      <div className="glass-card rounded-sm p-3 mb-4 border border-accent/20 bg-accent/[0.03]">
+        <h4 className="font-mono text-[10px] tracking-[0.2em] uppercase neon-text-cyan mb-2">[ INFRASTRUCTURE NODE ]</h4>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+          <div className="flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse shrink-0" />
+            <div>
+              <p className="font-mono text-[9px] text-bone-dim uppercase tracking-wider">Dev Environment</p>
+              <p className="font-mono text-[10px] text-bone leading-tight">Google Project IDX / AI Studio</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse shrink-0" />
+            <div>
+              <p className="font-mono text-[9px] text-bone-dim uppercase tracking-wider">Deployment</p>
+              <p className="font-mono text-[10px] text-bone leading-tight">Firebase Global Edge Network</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-[hsl(var(--neon-crimson))] animate-pulse shrink-0" />
+            <div>
+              <p className="font-mono text-[9px] text-bone-dim uppercase tracking-wider">Intelligence Layer</p>
+              <p className="font-mono text-[10px] text-bone leading-tight">Gemini 1.5 Pro / Ultra Orchestration</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="grid lg:grid-cols-2 gap-3">
+        <div className="space-y-3">
           <div>
             <h3 className="font-serif text-base text-bone mb-1 flex items-center gap-2">
               <Cpu size={14} className="neon-text-cyan" />

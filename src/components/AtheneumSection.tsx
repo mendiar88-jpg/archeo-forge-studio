@@ -69,7 +69,7 @@ const AtheneumSection = () => {
   const [lang, setLang] = useState<"en" | "es">("en");
 
   return (
-    <section id="atheneum" className="py-24 bg-stone-dark relative">
+    <section id="atheneum" className="py-4 bg-stone-dark relative">
       {/* Atmospheric overlay - dimly lit library through night-vision HUD */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background/50 pointer-events-none" />
 
@@ -85,15 +85,15 @@ const AtheneumSection = () => {
             {lang === "en" ? "ES" : "EN"}
           </button>
         </div>
-        <p className="font-mono text-xs tracking-[0.2em] uppercase neon-text-cyan mb-12">
+        <p className="font-mono text-xs tracking-[0.2em] uppercase neon-text-cyan mb-4">
           {lang === "en" ? "Knowledge Wiki" : "Wiki de Conocimiento"}
         </p>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {articles.map((a, i) => {
             const Icon = a.icon;
             return (
-              <article key={i} className="group glass-card p-6 rounded-sm flex flex-col circuit-border">
+              <article key={i} className="group glass-card p-4 rounded-sm flex flex-col circuit-border">
                 <div className="flex items-center gap-3 mb-4">
                   <Icon size={18} className="neon-text-cyan shrink-0" />
                   <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-bone-dim">{a.tag}</span>
@@ -101,7 +101,7 @@ const AtheneumSection = () => {
                 <h3 className="font-serif text-lg text-bone mb-3 group-hover:neon-text-gold transition-colors duration-300 glitch-hover">
                   {a.title[lang]}
                 </h3>
-                <p className="text-xs text-bone-dim leading-relaxed mb-4 flex-1">{a.content[lang]}</p>
+                <p className="text-xs text-bone-dim leading-tight mb-3 flex-1">{a.content[lang]}</p>
                 <div className="border-t border-border pt-3 mt-auto">
                   <p className="font-mono text-[10px] tracking-wider uppercase neon-text-cyan">▸ {a.takeaway[lang]}</p>
                 </div>

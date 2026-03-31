@@ -109,13 +109,13 @@ const FreelanceNode = ({ role }: { role: typeof freelanceRoles[0] }) => {
 
   return (
     <div className="glass-card rounded-sm circuit-border overflow-hidden">
-      <div className="p-5">
-        <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-1">
+      <div className="p-4">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-0.5">
           <span className="font-mono text-[10px] neon-text-cyan shrink-0">{role.date}</span>
           <span className="hidden sm:inline font-mono text-[10px] text-bone-dim">|</span>
           <h4 className="font-serif text-base text-bone">{role.title}</h4>
         </div>
-        <p className="font-mono text-[10px] text-bone-dim mb-3">{role.entity}</p>
+        <p className="font-mono text-[10px] text-bone-dim mb-2">{role.entity}</p>
         <button
           onClick={() => setExpanded(!expanded)}
           className="flex items-center gap-1.5 font-mono text-[10px] tracking-[0.15em] uppercase text-accent hover:text-primary transition-colors"
@@ -124,24 +124,27 @@ const FreelanceNode = ({ role }: { role: typeof freelanceRoles[0] }) => {
             size={12}
             className={`transition-transform duration-300 ${expanded ? "rotate-90" : ""}`}
           />
-          {expanded ? "COLLAPSE SPECIFICATIONS" : "VIEW SPECIFICATIONS"}
+          {expanded ? "COLLAPSE DEEP DIVE" : "TECHNICAL DEEP DIVE"}
         </button>
       </div>
 
       <div
         className={`overflow-hidden transition-all duration-500 ease-in-out ${
-          expanded ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          expanded ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="px-5 pb-5 pt-0 border-t border-accent/20 bg-secondary/20">
-          <ul className="space-y-2.5 mt-4">
+        <div className="px-4 pb-4 pt-0 border-t border-accent/20 bg-secondary/30">
+          <ul className="space-y-1.5 mt-3">
             {role.bullets.map((b, j) => (
-              <li key={j} className="flex gap-3 text-xs text-bone-dim leading-relaxed font-mono">
+              <li key={j} className="flex gap-2 text-[11px] text-bone-dim leading-tight font-mono">
                 <span className="neon-text-cyan mt-0.5 shrink-0">▸</span>
-                <span>{b}</span>
+                <span className="opacity-80">{b}</span>
               </li>
             ))}
           </ul>
+          <p className="mt-3 font-mono text-[9px] text-bone-dim/60 leading-tight italic border-l-2 border-primary/30 pl-2">
+            Continuously evolving. Currently integrating LLMs and AI agents into legacy operational frameworks.
+          </p>
         </div>
       </div>
     </div>
@@ -153,7 +156,7 @@ const ForgeSection = () => {
   const [legacyOpen, setLegacyOpen] = useState(false);
 
   return (
-    <section id="forge" className="py-16 bg-stone-dark metallic-bg oil-texture relative">
+    <section id="forge" className="py-4 bg-stone-dark metallic-bg oil-texture relative">
       <ScrollRevealWrapper className="container mx-auto px-4 max-w-5xl">
         {/* Header - compact */}
         <h2 className="font-serif text-3xl md:text-4xl text-bone mb-1">The Forge</h2>
@@ -181,10 +184,10 @@ const ForgeSection = () => {
           </div>
 
           {/* Tab content */}
-          <div className="p-6 md:p-8">
+          <div className="p-4 md:p-6">
             {/* ─── SERVICE LOGS TAB ─── */}
             {activeTab === "service-logs" && (
-              <div className="space-y-10">
+              <div className="space-y-4">
                 {/* Historical node */}
                 <div className="px-3 py-2 border-l-2 border-primary/50 bg-primary/5">
                   <p className="font-mono text-[10px] text-bone-dim leading-relaxed">
@@ -195,17 +198,17 @@ const ForgeSection = () => {
                 </div>
 
                 {/* Main roles timeline */}
-                <div className="relative border-l border-border pl-8 space-y-8">
+                <div className="relative border-l border-border pl-8 space-y-3">
                   {roles.map((role, i) => (
-                    <div key={i} className="relative glass-card p-5 md:p-6 rounded-sm circuit-border pulse-glow">
+                    <div key={i} className="relative glass-card p-4 md:p-5 rounded-sm circuit-border pulse-glow">
                       <div className="absolute -left-[41px] top-6 w-3 h-3 border-2 border-accent bg-background rounded-full shadow-[0_0_8px_hsl(185_100%_50%_/_0.4)]" />
                       <p className="font-mono text-[10px] neon-text-cyan mb-1">{role.date}</p>
                       <h3 className="font-serif text-lg md:text-xl text-bone mb-0.5">{role.title}</h3>
                       <p className="font-mono text-xs text-bone-dim mb-3">{role.company}</p>
                       <ul className="space-y-2">
                         {role.bullets.map((b, j) => (
-                          <li key={j} className="flex gap-3 text-xs text-bone-dim leading-relaxed">
-                            <span className="neon-text-cyan mt-1 shrink-0">▸</span>
+                          <li key={j} className="flex gap-2 text-xs text-bone-dim leading-tight">
+                            <span className="neon-text-cyan mt-0.5 shrink-0">▸</span>
                             <span>{b}</span>
                           </li>
                         ))}
