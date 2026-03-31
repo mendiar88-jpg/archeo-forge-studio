@@ -11,7 +11,6 @@ const ArchitectSection = () => (
         <div className="absolute top-0 left-0 h-16 w-px bg-accent" />
 
         <p className="text-sm md:text-base text-bone-dim leading-tight">
-        <p className="text-sm md:text-base text-bone-dim leading-loose">
           As an Architect (INTJ-A), my natural focus is system optimization. I possess a combination of strategic
           vision and technical pragmatism. I do not just execute tasks; I design workflows so that execution is
           flawless, based on logic, autonomy, and continuous process improvement (Kaizen). My background bridges the
