@@ -85,7 +85,7 @@ const AtheneumSection = () => {
             {lang === "en" ? "ES" : "EN"}
           </button>
         </div>
-        <p className="font-mono text-xs tracking-[0.2em] uppercase neon-text-cyan mb-12">
+        <p className="font-mono text-xs tracking-[0.2em] uppercase neon-text-cyan mb-4">
           {lang === "en" ? "Knowledge Wiki" : "Wiki de Conocimiento"}
         </p>
 
