@@ -3,7 +3,7 @@ import ScrollRevealWrapper from "@/components/ScrollRevealWrapper";
 import ContactForm from "@/components/ContactForm";
 
 const Footer = () => (
-  <footer id="contact" className="py-16 bg-stone-dark border-t border-border relative">
+  <footer id="contact" className="py-6 bg-stone-dark border-t border-border relative">
     {/* Corner accents */}
     <div className="absolute top-0 left-0 w-16 h-16 border-l border-t border-[hsl(var(--neon-crimson))]/20" />
     <div className="absolute top-0 right-0 w-16 h-16 border-r border-t border-accent/20" />
