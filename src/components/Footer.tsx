@@ -28,7 +28,7 @@ const Footer = () => (
 
       <ContactForm />
 
-      <div className="text-center mt-12">
+      <div className="text-center mt-6">
         <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-bone-dim">
           © {new Date().getFullYear()} Diego Armando Méndez — Built with precision.
         </p>

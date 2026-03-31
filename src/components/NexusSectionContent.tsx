@@ -204,7 +204,7 @@ const NexusSectionContent = () => {
   return (
     <div>
       {/* Terminal Search Bar */}
-      <div className="glass-card rounded-sm mb-6 overflow-hidden">
+      <div className="glass-card rounded-sm mb-3 overflow-hidden">
         <div className="flex items-center gap-2 px-4 py-1.5 bg-secondary/80 border-b border-border">
           <div className="w-2 h-2 rounded-full bg-destructive" />
           <div className="w-2 h-2 rounded-full bg-primary" />

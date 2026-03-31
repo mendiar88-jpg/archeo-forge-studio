@@ -101,7 +101,7 @@ const AtheneumSection = () => {
                 <h3 className="font-serif text-lg text-bone mb-3 group-hover:neon-text-gold transition-colors duration-300 glitch-hover">
                   {a.title[lang]}
                 </h3>
-                <p className="text-xs text-bone-dim leading-relaxed mb-4 flex-1">{a.content[lang]}</p>
+                <p className="text-xs text-bone-dim leading-tight mb-3 flex-1">{a.content[lang]}</p>
                 <div className="border-t border-border pt-3 mt-auto">
                   <p className="font-mono text-[10px] tracking-wider uppercase neon-text-cyan">▸ {a.takeaway[lang]}</p>
                 </div>
