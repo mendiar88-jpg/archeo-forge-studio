@@ -197,7 +197,7 @@ const ForgeSection = () => {
                 {/* Main roles timeline */}
                 <div className="relative border-l border-border pl-8 space-y-3">
                   {roles.map((role, i) => (
-                    <div key={i} className="relative glass-card p-5 md:p-6 rounded-sm circuit-border pulse-glow">
+                    <div key={i} className="relative glass-card p-4 md:p-5 rounded-sm circuit-border pulse-glow">
                       <div className="absolute -left-[41px] top-6 w-3 h-3 border-2 border-accent bg-background rounded-full shadow-[0_0_8px_hsl(185_100%_50%_/_0.4)]" />
                       <p className="font-mono text-[10px] neon-text-cyan mb-1">{role.date}</p>
                       <h3 className="font-serif text-lg md:text-xl text-bone mb-0.5">{role.title}</h3>
