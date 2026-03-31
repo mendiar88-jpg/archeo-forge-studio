@@ -10,7 +10,7 @@ const Footer = () => (
 
     <ScrollRevealWrapper className="container mx-auto px-4 max-w-4xl">
       <h2 className="font-serif text-2xl text-bone mb-2 text-center">Contact</h2>
-      <p className="font-mono text-[10px] tracking-[0.2em] uppercase neon-text-cyan mb-10 text-center">
+      <p className="font-mono text-[10px] tracking-[0.2em] uppercase neon-text-cyan mb-4 text-center">
         Communication Nexus
       </p>
 
