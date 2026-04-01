@@ -95,7 +95,7 @@ const SkillTag = ({
   <span
     onMouseEnter={() => onHover(name)}
     onMouseLeave={() => onHover(null)}
-    className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-wider uppercase px-3 py-1.5 border border-border rounded-sm bg-secondary/50 text-bone-dim hover:text-accent hover:border-accent hover:shadow-[0_0_10px_hsl(185_100%_50%_/_0.2)] transition-all duration-300 cursor-default"
+    className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-wider uppercase px-3 py-1.5 border border-border rounded-sm bg-secondary/50 text-bone-dim hover:text-[hsl(14_100%_57%)] hover:border-[hsl(0_100%_27%)] hover:shadow-[0_0_10px_hsl(0_100%_27%_/_0.3)] transition-all duration-300 cursor-default"
   >
     {name}
     {aiEnhanced && <Sparkles size={10} className="text-primary" />}
