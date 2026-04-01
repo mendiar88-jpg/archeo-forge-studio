@@ -44,8 +44,8 @@ const CivitasSection = () => (
   <div className="glass-card p-5 rounded-sm circuit-border">
     <div className="flex items-center gap-3 mb-2">
       <div className="relative">
-        <Users size={16} className="neon-text-gold" />
-        <Cpu size={9} className="absolute -bottom-0.5 -right-0.5 text-accent" />
+        <Users size={16} className="text-transparent bg-gradient-to-br from-[hsl(43_90%_55%)] to-[hsl(14_100%_57%)] bg-clip-text" style={{ filter: 'drop-shadow(0 0 6px hsl(14 100% 57% / 0.4))' }} />
+        <Cpu size={9} className="absolute -bottom-0.5 -right-0.5 neon-text-scarlet" />
       </div>
       <div>
         <h4 className="font-serif text-base text-bone glitch-hover">Social Systems Engineering</h4>

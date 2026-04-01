@@ -95,7 +95,7 @@ const SkillTag = ({
   <span
     onMouseEnter={() => onHover(name)}
     onMouseLeave={() => onHover(null)}
-    className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-wider uppercase px-3 py-1.5 border border-border rounded-sm bg-secondary/50 text-bone-dim hover:text-accent hover:border-accent hover:shadow-[0_0_10px_hsl(185_100%_50%_/_0.2)] transition-all duration-300 cursor-default"
+    className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-wider uppercase px-3 py-1.5 border border-border rounded-sm bg-secondary/50 text-bone-dim hover:text-[hsl(14_100%_57%)] hover:border-[hsl(0_100%_27%)] hover:shadow-[0_0_10px_hsl(0_100%_27%_/_0.3)] transition-all duration-300 cursor-default"
   >
     {name}
     {aiEnhanced && <Sparkles size={10} className="text-primary" />}
@@ -118,7 +118,7 @@ const DigitalMeter = ({ level, color, name }: { level: number; color: "gold" | "
           }`}>
             {tierLabel}
           </span>
-          <span className={`font-mono text-xs font-bold ${isGold ? "neon-text-gold" : "neon-text-cyan"}`}>
+          <span className={`font-mono text-xs font-bold ${isGold ? "neon-text-gold" : "neon-text-scarlet"}`}>
             {level}%
           </span>
         </div>
@@ -131,7 +131,7 @@ const DigitalMeter = ({ level, color, name }: { level: number; color: "gold" | "
               i < filledSegments
                 ? isGold
                   ? "bg-primary shadow-[0_0_4px_hsl(43_90%_55%_/_0.5)]"
-                  : "bg-accent shadow-[0_0_4px_hsl(185_100%_50%_/_0.5)]"
+                  : "bg-[hsl(0_100%_27%)] shadow-[0_0_4px_hsl(14_100%_57%_/_0.4)]"
                 : "bg-secondary/60"
             }`}
             style={{ transitionDelay: `${i * 30}ms` }}
