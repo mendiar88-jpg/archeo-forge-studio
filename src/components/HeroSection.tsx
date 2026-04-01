@@ -32,11 +32,11 @@ const HeroSection = () => (
                 background: "radial-gradient(ellipse 70% 70% at 50% 45%, transparent 30%, hsl(0 0% 3% / 0.7) 70%, hsl(0 0% 3%) 100%)",
               }}
             />
-            {/* Cyan/Gold bloom on highlights */}
+            {/* Scarlet/Gold bloom on highlights */}
             <div
               className="absolute inset-0 mix-blend-soft-light"
               style={{
-                background: "radial-gradient(ellipse 50% 50% at 55% 40%, hsl(185 100% 50% / 0.12) 0%, transparent 60%), radial-gradient(ellipse 40% 40% at 45% 50%, hsl(43 90% 55% / 0.08) 0%, transparent 60%)",
+                background: "radial-gradient(ellipse 50% 50% at 55% 40%, hsl(0 100% 27% / 0.15) 0%, transparent 60%), radial-gradient(ellipse 40% 40% at 45% 50%, hsl(43 90% 55% / 0.1) 0%, transparent 60%)",
               }}
             />
           </div>
