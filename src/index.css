@@ -6,56 +6,58 @@
 
 @layer base {
   :root {
-    --background: 0 0% 3%;
+    --background: 0 0% 0%;
     --foreground: 40 20% 90%;
 
-    --card: 0 0% 6%;
+    --card: 0 0% 5%;
     --card-foreground: 40 20% 90%;
 
-    --popover: 0 0% 6%;
+    --popover: 0 0% 5%;
     --popover-foreground: 40 20% 90%;
 
     --primary: 43 90% 55%;
     --primary-foreground: 0 0% 3%;
 
-    --secondary: 0 0% 10%;
+    --secondary: 0 0% 8%;
     --secondary-foreground: 40 20% 90%;
 
     --muted: 0 0% 12%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 0 100% 27%;
+    /* Accent is now Deep Cyan / Teal */
+    --accent: 185 100% 40%;
     --accent-foreground: 40 20% 90%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 14%;
+    --border: 185 30% 12%;
     --input: 0 0% 14%;
-    --ring: 0 100% 27%;
+    --ring: 185 100% 40%;
 
     --radius: 0.25rem;
 
     --gold: 43 90% 55%;
     --gold-dim: 43 60% 40%;
-    --neon-cyan: 0 100% 27%;
-    --neon-crimson: 14 100% 57%;
+    --neon-cyan: 185 100% 42%;
+    --neon-crimson: 0 100% 27%;
     --scarlet: 0 100% 27%;
     --scarlet-bright: 14 100% 57%;
-    --stone-dark: 0 0% 2%;
-    --stone: 0 0% 6%;
-    --stone-light: 0 0% 12%;
+    --stone-dark: 0 0% 0%;
+    --stone: 0 0% 5%;
+    --stone-light: 0 0% 10%;
     --bone: 40 20% 90%;
     --bone-dim: 40 10% 55%;
+    --aged-gold: 40 50% 50%;
 
     --sidebar-background: 0 0% 3%;
     --sidebar-foreground: 40 20% 90%;
-    --sidebar-primary: 0 100% 27%;
+    --sidebar-primary: 185 100% 40%;
     --sidebar-primary-foreground: 40 20% 90%;
     --sidebar-accent: 0 0% 10%;
     --sidebar-accent-foreground: 40 20% 90%;
-    --sidebar-border: 0 0% 14%;
-    --sidebar-ring: 0 100% 27%;
+    --sidebar-border: 185 30% 12%;
+    --sidebar-ring: 185 100% 40%;
   }
 }
 
@@ -77,7 +79,7 @@
   }
 
   ::selection {
-    background: hsl(0 100% 27% / 0.35);
+    background: hsl(185 100% 42% / 0.25);
     color: hsl(40 20% 95%);
   }
 
@@ -85,10 +87,10 @@
     width: 4px;
   }
   ::-webkit-scrollbar-track {
-    background: hsl(0 0% 3%);
+    background: hsl(0 0% 0%);
   }
   ::-webkit-scrollbar-thumb {
-    background: hsl(0 100% 27% / 0.5);
+    background: hsl(185 100% 42% / 0.4);
     border-radius: 2px;
   }
 }
@@ -107,12 +109,12 @@
     0deg,
     transparent,
     transparent 2px,
-    rgba(0, 0, 0, 0.08) 2px,
-    rgba(0, 0, 0, 0.08) 4px
+    rgba(0, 0, 0, 0.06) 2px,
+    rgba(0, 0, 0, 0.06) 4px
   );
 }
 
-/* Scarlet vignette overlay */
+/* Scarlet vignette overlay - subtle dark red corners */
 .scarlet-vignette::after {
   content: '';
   position: fixed;
@@ -122,7 +124,7 @@
   height: 100%;
   pointer-events: none;
   z-index: 98;
-  background: radial-gradient(ellipse 80% 80% at 50% 50%, transparent 50%, hsl(0 100% 10% / 0.15) 85%, hsl(0 100% 5% / 0.35) 100%);
+  background: radial-gradient(ellipse 80% 80% at 50% 50%, transparent 50%, hsl(0 100% 8% / 0.12) 85%, hsl(0 100% 5% / 0.3) 100%);
 }
 
 /* Noise texture overlay */
@@ -135,7 +137,7 @@
   height: 100%;
   pointer-events: none;
   z-index: 99;
-  opacity: 0.035;
+  opacity: 0.03;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 256px 256px;
@@ -143,26 +145,26 @@
 
 /* Glassmorphism card */
 .glass-card {
-  background: hsl(0 0% 6% / 0.6);
+  background: hsl(0 0% 4% / 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid hsl(0 100% 27% / 0.1);
+  border: 1px solid hsl(185 100% 42% / 0.08);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .glass-card:hover {
-  border-color: hsl(0 100% 27% / 0.5);
+  border-color: hsl(185 100% 42% / 0.3);
   box-shadow:
-    0 0 15px hsl(0 100% 27% / 0.2),
-    0 0 30px hsl(14 100% 57% / 0.08),
-    inset 0 0 15px hsl(0 100% 27% / 0.05);
+    0 0 15px hsl(185 100% 42% / 0.08),
+    0 0 30px hsl(43 90% 55% / 0.04),
+    inset 0 0 15px hsl(185 100% 42% / 0.03);
 }
 
 /* Terminal button */
 .btn-terminal {
   position: relative;
   overflow: hidden;
-  border: 1px solid hsl(0 100% 27% / 0.5);
-  color: hsl(14 100% 57%);
+  border: 1px solid hsl(185 100% 42% / 0.5);
+  color: hsl(185 100% 50%);
   font-family: 'Roboto Mono', monospace;
   font-size: 11px;
   letter-spacing: 0.2em;
@@ -182,10 +184,10 @@
   opacity: 1;
 }
 .btn-terminal:hover {
-  background: hsl(0 100% 27% / 0.1);
-  border-color: hsl(14 100% 57%);
-  box-shadow: 0 0 20px hsl(0 100% 27% / 0.4), 0 0 40px hsl(14 100% 57% / 0.15), inset 0 0 20px hsl(0 100% 27% / 0.08);
-  text-shadow: 0 0 8px hsl(14 100% 57% / 0.6);
+  background: hsl(185 100% 42% / 0.08);
+  border-color: hsl(185 100% 50%);
+  box-shadow: 0 0 20px hsl(185 100% 42% / 0.3), 0 0 40px hsl(185 100% 50% / 0.1), inset 0 0 20px hsl(185 100% 42% / 0.05);
+  text-shadow: 0 0 8px hsl(185 100% 50% / 0.5);
 }
 
 .btn-terminal-gold {
@@ -214,7 +216,7 @@
 
 /* Typing cursor */
 @keyframes blink-cursor {
-  0%, 100% { border-right-color: hsl(14 100% 57%); }
+  0%, 100% { border-right-color: hsl(185 100% 50%); }
   50% { border-right-color: transparent; }
 }
 @keyframes typing {
@@ -225,13 +227,13 @@
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 2px solid hsl(14 100% 57%);
+  border-right: 2px solid hsl(185 100% 50%);
   animation: typing 3.5s steps(60, end) forwards, blink-cursor 0.8s step-end infinite;
 }
 
-/* Neon glow utilities */
+/* Neon glow utilities - Cyan (primary tech), Gold (authority), Scarlet (energy/anomaly) */
 .neon-glow-cyan {
-  box-shadow: 0 0 10px hsl(0 100% 27% / 0.3), 0 0 30px hsl(14 100% 57% / 0.15);
+  box-shadow: 0 0 10px hsl(185 100% 42% / 0.3), 0 0 30px hsl(185 100% 50% / 0.15);
 }
 .neon-glow-gold {
   box-shadow: 0 0 10px hsl(43 90% 55% / 0.2), 0 0 30px hsl(43 90% 55% / 0.1);
@@ -240,8 +242,8 @@
   box-shadow: 0 0 10px hsl(0 100% 27% / 0.3), 0 0 30px hsl(14 100% 57% / 0.15), 0 0 60px hsl(0 100% 27% / 0.08);
 }
 .neon-text-cyan {
-  color: hsl(14 100% 57%);
-  text-shadow: 0 0 10px hsl(14 100% 57% / 0.5), 0 0 20px hsl(0 100% 27% / 0.3);
+  color: hsl(185 100% 50%);
+  text-shadow: 0 0 10px hsl(185 100% 50% / 0.5), 0 0 20px hsl(185 100% 42% / 0.3);
 }
 .neon-text-gold {
   color: hsl(43 90% 55%);
@@ -252,9 +254,9 @@
   text-shadow: 0 0 10px hsl(14 100% 57% / 0.5), 0 0 20px hsl(0 100% 27% / 0.3);
 }
 
-/* Bloom effects - Impressionist light bleed */
+/* Bloom effects */
 .bloom-cyan {
-  filter: drop-shadow(0 0 8px hsl(14 100% 57% / 0.4)) drop-shadow(0 0 20px hsl(0 100% 27% / 0.2));
+  filter: drop-shadow(0 0 8px hsl(185 100% 50% / 0.4)) drop-shadow(0 0 20px hsl(185 100% 42% / 0.2));
 }
 .bloom-gold {
   filter: drop-shadow(0 0 8px hsl(43 90% 55% / 0.4)) drop-shadow(0 0 20px hsl(43 90% 55% / 0.15));
@@ -265,9 +267,9 @@
 
 /* Glitch hover effect for titles */
 @keyframes glitch-text {
-  0%, 100% { transform: translate(0); text-shadow: 0 0 10px hsl(14 100% 57% / 0.5); }
-  20% { transform: translate(-1px, 1px); text-shadow: -2px 0 hsl(0 100% 27% / 0.8), 2px 0 hsl(14 100% 57% / 0.7); }
-  40% { transform: translate(1px, -1px); text-shadow: 2px 0 hsl(0 100% 27% / 0.8), -2px 0 hsl(14 100% 57% / 0.7); }
+  0%, 100% { transform: translate(0); text-shadow: 0 0 10px hsl(185 100% 50% / 0.5); }
+  20% { transform: translate(-1px, 1px); text-shadow: -2px 0 hsl(185 100% 42% / 0.8), 2px 0 hsl(43 90% 55% / 0.7); }
+  40% { transform: translate(1px, -1px); text-shadow: 2px 0 hsl(185 100% 42% / 0.8), -2px 0 hsl(43 90% 55% / 0.7); }
   60% { transform: translate(-1px, 0); }
   80% { transform: translate(1px, 0); }
 }
@@ -278,7 +280,7 @@
   animation: glitch-text 0.4s ease-in-out;
 }
 
-/* Circuit trace borders - scarlet iron */
+/* Circuit trace borders - cyan/gold */
 .circuit-border {
   position: relative;
 }
@@ -292,10 +294,10 @@
   border: 1px solid transparent;
   border-image: linear-gradient(
     135deg,
-    hsl(0 100% 27% / 0.4) 0%,
+    hsl(185 100% 42% / 0.3) 0%,
     transparent 30%,
     transparent 70%,
-    hsl(14 100% 57% / 0.2) 100%
+    hsl(43 90% 55% / 0.15) 100%
   ) 1;
   pointer-events: none;
   transition: all 0.4s;
@@ -303,10 +305,10 @@
 .circuit-border:hover::before {
   border-image: linear-gradient(
     135deg,
-    hsl(14 100% 57% / 0.7) 0%,
-    hsl(0 100% 27% / 0.2) 30%,
+    hsl(185 100% 50% / 0.6) 0%,
+    hsl(185 100% 42% / 0.15) 30%,
     hsl(43 90% 55% / 0.1) 70%,
-    hsl(0 100% 27% / 0.5) 100%
+    hsl(185 100% 42% / 0.4) 100%
   ) 1;
 }
 
@@ -327,35 +329,98 @@
 /* Metallic brushed steel texture for Forge */
 .metallic-bg {
   background-image:
-    linear-gradient(135deg, hsl(0 0% 4%) 0%, hsl(0 0% 6%) 50%, hsl(0 0% 3%) 100%),
+    linear-gradient(135deg, hsl(0 0% 2%) 0%, hsl(0 0% 4%) 50%, hsl(0 0% 1%) 100%),
     repeating-linear-gradient(
       90deg,
       transparent,
       transparent 1px,
-      hsl(0 0% 8% / 0.3) 1px,
-      hsl(0 0% 8% / 0.3) 2px
+      hsl(0 0% 6% / 0.3) 1px,
+      hsl(0 0% 6% / 0.3) 2px
     );
 }
 
-/* Rhythmic pulsing glow for active nodes */
+/* Rhythmic pulsing glow for active nodes - cyan */
 @keyframes industrial-pulse {
-  0%, 100% { box-shadow: 0 0 5px hsl(0 100% 27% / 0.15); }
-  50% { box-shadow: 0 0 15px hsl(0 100% 27% / 0.3), 0 0 30px hsl(14 100% 57% / 0.12); }
+  0%, 100% { box-shadow: 0 0 5px hsl(185 100% 42% / 0.1); }
+  50% { box-shadow: 0 0 15px hsl(185 100% 42% / 0.2), 0 0 30px hsl(185 100% 50% / 0.08); }
 }
 
-/* Scarlet section separator */
+/* Scarlet section separator - etched iron with scarlet glow */
 .scarlet-separator {
   height: 1px;
-  background: linear-gradient(90deg, transparent, hsl(0 100% 27% / 0.5) 20%, hsl(14 100% 57% / 0.3) 50%, hsl(0 100% 27% / 0.5) 80%, transparent);
-  box-shadow: 0 0 8px hsl(0 100% 27% / 0.2), 0 1px 3px hsl(14 100% 57% / 0.1);
+  background: linear-gradient(90deg, transparent, hsl(185 100% 42% / 0.4) 20%, hsl(43 90% 55% / 0.2) 50%, hsl(185 100% 42% / 0.4) 80%, transparent);
+  box-shadow: 0 0 8px hsl(185 100% 42% / 0.15), 0 1px 3px hsl(43 90% 55% / 0.05);
 }
 
 /* Deep red ambient radial for content depth */
 .scarlet-depth {
-  background: radial-gradient(ellipse 60% 50% at 50% 50%, hsl(0 100% 10% / 0.2) 0%, transparent 70%);
+  background: radial-gradient(ellipse 60% 50% at 50% 50%, hsl(0 100% 8% / 0.15) 0%, transparent 70%);
 }
 .pulse-glow {
   animation: industrial-pulse 3s ease-in-out infinite;
+}
+
+/* ═══ SCARLET ENERGY BEAMS ═══ */
+@keyframes energy-beam-1 {
+  0% { transform: translateX(-120%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(120%); opacity: 0; }
+}
+@keyframes energy-beam-2 {
+  0% { transform: translateX(120%); opacity: 0; }
+  15% { opacity: 0.8; }
+  85% { opacity: 0.8; }
+  100% { transform: translateX(-120%); opacity: 0; }
+}
+
+.energy-beams {
+  position: relative;
+  overflow: hidden;
+}
+.energy-beams::before,
+.energy-beams::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  pointer-events: none;
+  z-index: 1;
+}
+.energy-beams::before {
+  top: 30%;
+  background: linear-gradient(90deg, transparent, hsl(0 100% 27% / 0.6) 30%, hsl(14 100% 57% / 0.4) 50%, hsl(0 100% 27% / 0.6) 70%, transparent);
+  box-shadow: 0 0 12px hsl(0 100% 27% / 0.4), 0 0 30px hsl(14 100% 57% / 0.15);
+  animation: energy-beam-1 12s ease-in-out infinite;
+}
+.energy-beams::after {
+  top: 70%;
+  background: linear-gradient(90deg, transparent, hsl(14 100% 57% / 0.3) 25%, hsl(0 100% 27% / 0.5) 50%, hsl(14 100% 57% / 0.3) 75%, transparent);
+  box-shadow: 0 0 8px hsl(14 100% 57% / 0.3), 0 0 20px hsl(0 100% 27% / 0.1);
+  animation: energy-beam-2 18s ease-in-out 4s infinite;
+}
+
+/* Ironforge Rust hover - ancient machinery activated */
+.ironforge-hover {
+  transition: all 0.4s ease;
+}
+.ironforge-hover:hover {
+  box-shadow: 0 0 15px hsl(0 100% 27% / 0.25), 0 0 30px hsl(0 100% 27% / 0.1);
+}
+
+/* Icon scarlet sparkle bloom on hover */
+.icon-heated {
+  transition: filter 0.4s ease, color 0.4s ease;
+}
+.icon-heated:hover {
+  filter: drop-shadow(0 0 6px hsl(0 100% 27% / 0.5)) drop-shadow(0 0 12px hsl(14 100% 57% / 0.25));
+}
+
+/* Aged gold text */
+.text-aged-gold {
+  color: hsl(var(--aged-gold));
+  text-shadow: 0 0 6px hsl(40 50% 50% / 0.3);
 }
 
 @layer utilities {
