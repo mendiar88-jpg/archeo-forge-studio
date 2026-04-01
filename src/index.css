@@ -254,10 +254,13 @@
 
 /* Bloom effects - Impressionist light bleed */
 .bloom-cyan {
-  filter: drop-shadow(0 0 8px hsl(185 100% 50% / 0.4)) drop-shadow(0 0 20px hsl(185 100% 50% / 0.15));
+  filter: drop-shadow(0 0 8px hsl(14 100% 57% / 0.4)) drop-shadow(0 0 20px hsl(0 100% 27% / 0.2));
 }
 .bloom-gold {
   filter: drop-shadow(0 0 8px hsl(43 90% 55% / 0.4)) drop-shadow(0 0 20px hsl(43 90% 55% / 0.15));
+}
+.bloom-scarlet {
+  filter: drop-shadow(0 0 8px hsl(14 100% 57% / 0.5)) drop-shadow(0 0 20px hsl(0 100% 27% / 0.25));
 }
 
 /* Glitch hover effect for titles */
