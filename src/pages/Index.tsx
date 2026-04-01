@@ -14,7 +14,7 @@ const Index = () => {
   if (!loaded) return <LoadingScreen onComplete={handleLoadComplete} />;
 
   return (
-    <div className="min-h-screen bg-background crt-overlay noise-bg scroll-smooth">
+    <div className="min-h-screen bg-background crt-overlay noise-bg scarlet-vignette scroll-smooth">
       <Navbar />
       <HeroSection />
       <ArchitectSection />

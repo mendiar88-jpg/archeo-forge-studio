@@ -118,7 +118,7 @@ const DigitalMeter = ({ level, color, name }: { level: number; color: "gold" | "
           }`}>
             {tierLabel}
           </span>
-          <span className={`font-mono text-xs font-bold ${isGold ? "neon-text-gold" : "neon-text-cyan"}`}>
+          <span className={`font-mono text-xs font-bold ${isGold ? "neon-text-gold" : "neon-text-scarlet"}`}>
             {level}%
           </span>
         </div>

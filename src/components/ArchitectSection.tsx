@@ -1,7 +1,7 @@
 import ScrollRevealWrapper from "@/components/ScrollRevealWrapper";
 
 const ArchitectSection = () => (
-  <section id="architect" className="py-4 bg-background oil-texture relative">
+  <section id="architect" className="py-4 bg-background oil-texture relative scarlet-depth">
     <ScrollRevealWrapper className="container mx-auto px-4 max-w-3xl">
       <h2 className="font-serif text-3xl md:text-4xl text-bone mb-1">The Architect</h2>
       <p className="font-mono text-xs tracking-[0.2em] uppercase neon-text-cyan mb-4">INTJ-A</p>

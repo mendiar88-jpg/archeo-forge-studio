@@ -45,7 +45,7 @@ const HeroSection = () => (
         {/* Text content */}
         <div className="text-center md:text-left flex-1">
           {/* decorative line */}
-          <div className="mx-auto md:mx-0 mb-8 h-px w-24 animate-line-expand" style={{ background: 'linear-gradient(90deg, transparent, hsl(185 100% 50%), transparent)' }} />
+          <div className="mx-auto md:mx-0 mb-8 h-px w-24 animate-line-expand" style={{ background: 'linear-gradient(90deg, transparent, hsl(14 100% 57%), transparent)' }} />
 
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold tracking-wider text-bone mb-6 animate-fade-in">
             DIEGO ARMANDO MÉNDEZ
