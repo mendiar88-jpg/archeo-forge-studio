@@ -32,14 +32,16 @@
 
     --border: 0 0% 14%;
     --input: 0 0% 14%;
-    --ring: 185 100% 50%;
+    --ring: 0 100% 27%;
 
     --radius: 0.25rem;
 
     --gold: 43 90% 55%;
     --gold-dim: 43 60% 40%;
-    --neon-cyan: 185 100% 50%;
-    --neon-crimson: 348 100% 55%;
+    --neon-cyan: 0 100% 27%;
+    --neon-crimson: 14 100% 57%;
+    --scarlet: 0 100% 27%;
+    --scarlet-bright: 14 100% 57%;
     --stone-dark: 0 0% 2%;
     --stone: 0 0% 6%;
     --stone-light: 0 0% 12%;
