@@ -339,8 +339,20 @@
 
 /* Rhythmic pulsing glow for active nodes */
 @keyframes industrial-pulse {
-  0%, 100% { box-shadow: 0 0 5px hsl(185 100% 50% / 0.1); }
-  50% { box-shadow: 0 0 15px hsl(185 100% 50% / 0.25), 0 0 30px hsl(185 100% 50% / 0.1); }
+  0%, 100% { box-shadow: 0 0 5px hsl(0 100% 27% / 0.15); }
+  50% { box-shadow: 0 0 15px hsl(0 100% 27% / 0.3), 0 0 30px hsl(14 100% 57% / 0.12); }
+}
+
+/* Scarlet section separator */
+.scarlet-separator {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, hsl(0 100% 27% / 0.5) 20%, hsl(14 100% 57% / 0.3) 50%, hsl(0 100% 27% / 0.5) 80%, transparent);
+  box-shadow: 0 0 8px hsl(0 100% 27% / 0.2), 0 1px 3px hsl(14 100% 57% / 0.1);
+}
+
+/* Deep red ambient radial for content depth */
+.scarlet-depth {
+  background: radial-gradient(ellipse 60% 50% at 50% 50%, hsl(0 100% 10% / 0.2) 0%, transparent 70%);
 }
 .pulse-glow {
   animation: industrial-pulse 3s ease-in-out infinite;
