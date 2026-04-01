@@ -13,10 +13,10 @@ const HeroSection = () => (
       <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
         {/* Portrait with Chiaroscuro effect */}
         <div className="relative shrink-0 w-48 h-48 md:w-64 md:h-64">
-          {/* Outer neon bloom ring */}
-          <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-accent/20 via-transparent to-primary/20 blur-xl opacity-60" />
+          {/* Outer neon bloom ring - scarlet/gold */}
+          <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-[hsl(0_100%_27%_/_0.25)] via-transparent to-[hsl(43_90%_55%_/_0.2)] blur-xl opacity-70" />
           {/* Portrait container */}
-          <div className="relative w-full h-full rounded-full overflow-hidden border border-accent/20 shadow-[0_0_30px_hsl(185_100%_50%_/_0.15),0_0_60px_hsl(43_90%_55%_/_0.08)]">
+          <div className="relative w-full h-full rounded-full overflow-hidden border border-[hsl(0_100%_27%_/_0.3)] shadow-[0_0_30px_hsl(0_100%_27%_/_0.2),0_0_60px_hsl(14_100%_57%_/_0.1),0_0_80px_hsl(43_90%_55%_/_0.05)]">
             <img
               src={portrait}
               alt="Diego Armando Méndez"
