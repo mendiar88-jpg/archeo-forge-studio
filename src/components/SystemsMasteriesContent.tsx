@@ -131,6 +131,8 @@ const DigitalMeter = ({ level, color, name }: { level: number; color: "gold" | "
               i < filledSegments
                 ? isGold
                   ? "bg-primary shadow-[0_0_4px_hsl(43_90%_55%_/_0.5)]"
+                  : "bg-[hsl(0_100%_27%)] shadow-[0_0_4px_hsl(14_100%_57%_/_0.4)]"
+                : "bg-secondary/60"
                   : "bg-accent shadow-[0_0_4px_hsl(185_100%_50%_/_0.5)]"
                 : "bg-secondary/60"
             }`}
