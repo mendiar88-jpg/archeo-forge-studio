@@ -20,6 +20,7 @@ const roles = [
     title: "Bilingual Banking Support Specialist",
     company: "Sutherland - Capital One",
     date: "Nov 2024 – Mar 2025",
+    clearance: true,
     bullets: [
       "Delivered bilingual (EN/ES) Tier 1-2 support for Capital One's U.S. customer base, handling sensitive financial data in compliance with banking security protocols.",
       "Managed payment structures, billing inquiries, and insurance-related technical support with a focus on data integrity and regulatory compliance.",
@@ -31,6 +32,7 @@ const roles = [
     title: "Customer Success Associate",
     company: "Concentrix/Webhelp - CIGNA Healthcare",
     date: "Aug 2023 – Nov 2024",
+    clearance: true,
     bullets: [
       "Administered multichannel healthcare support operations for CIGNA, ensuring compliance with QA metrics and strategic guidelines.",
       "Verified patient eligibility for medical services by reviewing CPT codes and insurance plan types (EPO, HMO, PPO), supporting patient access workflows.",
@@ -108,7 +110,7 @@ const FreelanceNode = ({ role }: { role: typeof freelanceRoles[0] }) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="glass-card rounded-sm circuit-border overflow-hidden">
+    <div className="glass-card rounded-sm circuit-border overflow-hidden ironforge-hover">
       <div className="p-4">
         <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-0.5">
           <span className="font-mono text-[10px] neon-text-cyan shrink-0">{role.date}</span>
@@ -156,9 +158,9 @@ const ForgeSection = () => {
   const [legacyOpen, setLegacyOpen] = useState(false);
 
   return (
-    <section id="forge" className="py-4 bg-stone-dark metallic-bg oil-texture relative scarlet-depth">
-      <ScrollRevealWrapper className="container mx-auto px-4 max-w-5xl">
-        {/* Header - compact */}
+    <section id="forge" className="py-4 bg-stone-dark metallic-bg oil-texture relative scarlet-depth energy-beams">
+      <ScrollRevealWrapper className="container mx-auto px-4 max-w-5xl relative z-10">
+        {/* Header */}
         <h2 className="font-serif text-3xl md:text-4xl text-bone mb-1">The Forge</h2>
         <p className="font-mono text-xs tracking-[0.2em] uppercase neon-text-cyan mb-4">
           Command Center
@@ -200,11 +202,16 @@ const ForgeSection = () => {
                 {/* Main roles timeline */}
                 <div className="relative border-l border-border pl-8 space-y-3">
                   {roles.map((role, i) => (
-                    <div key={i} className="relative glass-card p-4 md:p-5 rounded-sm circuit-border pulse-glow">
+                    <div key={i} className="relative glass-card p-4 md:p-5 rounded-sm circuit-border pulse-glow ironforge-hover">
                       <div className="absolute -left-[41px] top-6 w-3 h-3 border-2 border-accent bg-background rounded-full shadow-[0_0_8px_hsl(185_100%_50%_/_0.4)]" />
                       <p className="font-mono text-[10px] neon-text-cyan mb-1">{role.date}</p>
                       <h3 className="font-serif text-lg md:text-xl text-bone mb-0.5">{role.title}</h3>
                       <p className="font-mono text-xs text-bone-dim mb-3">{role.company}</p>
+                      {role.clearance && (
+                        <p className="font-mono text-[9px] tracking-wider uppercase mb-2">
+                          <span className="text-aged-gold">Security Clearance Required</span>
+                        </p>
+                      )}
                       <ul className="space-y-2">
                         {role.bullets.map((b, j) => (
                           <li key={j} className="flex gap-2 text-xs text-bone-dim leading-tight">
@@ -217,7 +224,7 @@ const ForgeSection = () => {
                   ))}
                 </div>
 
-                {/* Freelance Roles - Expandable Data Nodes */}
+                {/* Freelance Roles */}
                 <div>
                   <h3 className="font-serif text-lg text-bone mb-1 flex items-center gap-2">
                     <Terminal size={14} className="neon-text-gold" />
@@ -233,11 +240,11 @@ const ForgeSection = () => {
                   </div>
                 </div>
 
-                {/* Legacy Logs - Collapsible */}
+                {/* Legacy Logs */}
                 <div>
                   <button
                     onClick={() => setLegacyOpen(!legacyOpen)}
-                    className="w-full flex items-center gap-3 p-3 rounded-sm border border-border hover:border-accent/50 transition-all duration-300 bg-secondary/30"
+                    className="w-full flex items-center gap-3 p-3 rounded-sm border border-border hover:border-accent/50 transition-all duration-300 bg-secondary/30 ironforge-hover"
                   >
                     <Terminal size={14} className="neon-text-cyan" />
                     <span className="font-mono text-[10px] tracking-[0.15em] uppercase neon-text-gold">
@@ -261,7 +268,7 @@ const ForgeSection = () => {
                       {legacyRoles.map((role, i) => (
                         <div
                           key={i}
-                          className="relative py-2.5 px-3 bg-secondary/30 border border-border/30 rounded-sm hover:border-accent/30 transition-all duration-300"
+                          className="relative py-2.5 px-3 bg-secondary/30 border border-border/30 rounded-sm hover:border-accent/30 transition-all duration-300 ironforge-hover"
                         >
                           <div className="absolute -left-[21px] top-4 w-2 h-2 border border-accent/50 bg-background rounded-full" />
                           <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-0.5">

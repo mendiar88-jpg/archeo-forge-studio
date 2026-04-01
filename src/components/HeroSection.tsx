@@ -11,12 +11,10 @@ const HeroSection = () => (
 
     <div className="relative z-10 container mx-auto px-4 max-w-5xl">
       <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
-        {/* Portrait with Chiaroscuro effect */}
+        {/* Portrait with Chiaroscuro effect - cyan/gold bloom */}
         <div className="relative shrink-0 w-48 h-48 md:w-64 md:h-64">
-          {/* Outer neon bloom ring - scarlet/gold */}
-          <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-[hsl(0_100%_27%_/_0.25)] via-transparent to-[hsl(43_90%_55%_/_0.2)] blur-xl opacity-70" />
-          {/* Portrait container */}
-          <div className="relative w-full h-full rounded-full overflow-hidden border border-[hsl(0_100%_27%_/_0.3)] shadow-[0_0_30px_hsl(0_100%_27%_/_0.2),0_0_60px_hsl(14_100%_57%_/_0.1),0_0_80px_hsl(43_90%_55%_/_0.05)]">
+          <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-[hsl(185_100%_42%_/_0.2)] via-transparent to-[hsl(43_90%_55%_/_0.15)] blur-xl opacity-70" />
+          <div className="relative w-full h-full rounded-full overflow-hidden border border-[hsl(185_100%_42%_/_0.25)] shadow-[0_0_30px_hsl(185_100%_42%_/_0.15),0_0_60px_hsl(43_90%_55%_/_0.08),0_0_80px_hsl(0_100%_27%_/_0.05)]">
             <img
               src={portrait}
               alt="Diego Armando Méndez"
@@ -25,18 +23,16 @@ const HeroSection = () => (
                 filter: "contrast(1.15) brightness(0.85) saturate(0.1)",
               }}
             />
-            {/* Vignette overlay */}
             <div
               className="absolute inset-0"
               style={{
-                background: "radial-gradient(ellipse 70% 70% at 50% 45%, transparent 30%, hsl(0 0% 3% / 0.7) 70%, hsl(0 0% 3%) 100%)",
+                background: "radial-gradient(ellipse 70% 70% at 50% 45%, transparent 30%, hsl(0 0% 0% / 0.7) 70%, hsl(0 0% 0%) 100%)",
               }}
             />
-            {/* Scarlet/Gold bloom on highlights */}
             <div
               className="absolute inset-0 mix-blend-soft-light"
               style={{
-                background: "radial-gradient(ellipse 50% 50% at 55% 40%, hsl(0 100% 27% / 0.15) 0%, transparent 60%), radial-gradient(ellipse 40% 40% at 45% 50%, hsl(43 90% 55% / 0.1) 0%, transparent 60%)",
+                background: "radial-gradient(ellipse 50% 50% at 55% 40%, hsl(185 100% 42% / 0.12) 0%, transparent 60%), radial-gradient(ellipse 40% 40% at 45% 50%, hsl(43 90% 55% / 0.1) 0%, transparent 60%)",
               }}
             />
           </div>
@@ -44,15 +40,14 @@ const HeroSection = () => (
 
         {/* Text content */}
         <div className="text-center md:text-left flex-1">
-          {/* decorative line */}
-          <div className="mx-auto md:mx-0 mb-8 h-px w-24 animate-line-expand" style={{ background: 'linear-gradient(90deg, transparent, hsl(14 100% 57%), transparent)' }} />
+          <div className="mx-auto md:mx-0 mb-8 h-px w-24 animate-line-expand" style={{ background: 'linear-gradient(90deg, transparent, hsl(185 100% 50%), transparent)' }} />
 
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold tracking-wider text-bone mb-6 animate-fade-in">
             DIEGO ARMANDO MÉNDEZ
           </h1>
 
           <div className="mb-8 animate-fade-in overflow-hidden" style={{ animationDelay: "0.2s", opacity: 0 }}>
-            <h2 className="typing-effect font-mono text-sm sm:text-base md:text-lg text-neon mx-auto md:mx-0 max-w-fit">
+            <h2 className="typing-effect font-mono text-sm sm:text-base md:text-lg neon-text-cyan mx-auto md:mx-0 max-w-fit">
               Bilingual Operations Orchestrator | Customer Success &amp; Case Management Specialist | AI Workflow Automation
             </h2>
           </div>

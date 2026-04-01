@@ -95,7 +95,7 @@ const SkillTag = ({
   <span
     onMouseEnter={() => onHover(name)}
     onMouseLeave={() => onHover(null)}
-    className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-wider uppercase px-3 py-1.5 border border-border rounded-sm bg-secondary/50 text-bone-dim hover:text-[hsl(14_100%_57%)] hover:border-[hsl(0_100%_27%)] hover:shadow-[0_0_10px_hsl(0_100%_27%_/_0.3)] transition-all duration-300 cursor-default"
+    className="inline-flex items-center gap-1.5 font-mono text-[10px] tracking-wider uppercase px-3 py-1.5 border border-border rounded-sm bg-secondary/50 text-bone-dim hover:text-accent hover:border-accent/50 hover:shadow-[0_0_10px_hsl(185_100%_42%_/_0.15)] transition-all duration-300 cursor-default icon-heated"
   >
     {name}
     {aiEnhanced && <Sparkles size={10} className="text-primary" />}
@@ -118,7 +118,7 @@ const DigitalMeter = ({ level, color, name }: { level: number; color: "gold" | "
           }`}>
             {tierLabel}
           </span>
-          <span className={`font-mono text-xs font-bold ${isGold ? "neon-text-gold" : "neon-text-scarlet"}`}>
+          <span className={`font-mono text-xs font-bold ${isGold ? "neon-text-gold" : "neon-text-cyan"}`}>
             {level}%
           </span>
         </div>
@@ -131,7 +131,7 @@ const DigitalMeter = ({ level, color, name }: { level: number; color: "gold" | "
               i < filledSegments
                 ? isGold
                   ? "bg-primary shadow-[0_0_4px_hsl(43_90%_55%_/_0.5)]"
-                  : "bg-[hsl(0_100%_27%)] shadow-[0_0_4px_hsl(14_100%_57%_/_0.4)]"
+                  : "bg-accent shadow-[0_0_4px_hsl(185_100%_50%_/_0.4)]"
                 : "bg-secondary/60"
             }`}
             style={{ transitionDelay: `${i * 30}ms` }}
@@ -157,9 +157,9 @@ const SystemsMasteriesContent = () => {
         {categories.map((cat) => {
           const Icon = cat.icon;
           return (
-            <div key={cat.subtitle} className="glass-card p-5 rounded-sm">
+            <div key={cat.subtitle} className="glass-card p-5 rounded-sm ironforge-hover">
               <div className="flex items-center gap-3 mb-1">
-                <Icon size={16} className={cat.color === "gold" ? "neon-text-gold" : "neon-text-cyan"} />
+                <Icon size={16} className={`${cat.color === "gold" ? "neon-text-gold" : "neon-text-cyan"} icon-heated`} />
                 <h3 className="font-serif text-base text-bone">{cat.title}</h3>
               </div>
               <p className="font-mono text-[9px] tracking-[0.2em] uppercase text-bone-dim mb-4">

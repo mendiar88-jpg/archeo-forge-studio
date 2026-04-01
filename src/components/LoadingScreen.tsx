@@ -34,10 +34,10 @@ const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
 
   return (
     <div className="fixed inset-0 z-[200] bg-background flex flex-col items-center justify-center">
-      {/* Corner accents */}
+      {/* Corner accents - cyan */}
       <div className="absolute top-0 left-0 w-16 h-16 border-l-2 border-t-2 border-accent/40" />
-      <div className="absolute top-0 right-0 w-16 h-16 border-r-2 border-t-2 border-[hsl(var(--neon-crimson))]/40" />
-      <div className="absolute bottom-0 left-0 w-16 h-16 border-l-2 border-b-2 border-[hsl(var(--neon-crimson))]/40" />
+      <div className="absolute top-0 right-0 w-16 h-16 border-r-2 border-t-2 border-primary/40" />
+      <div className="absolute bottom-0 left-0 w-16 h-16 border-l-2 border-b-2 border-primary/40" />
       <div className="absolute bottom-0 right-0 w-16 h-16 border-r-2 border-b-2 border-accent/40" />
 
       {/* Monogram */}
