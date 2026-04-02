@@ -396,15 +396,15 @@
 }
 .energy-beams::before {
   top: 25%;
-  background: linear-gradient(90deg, transparent 5%, hsl(0 100% 50% / 0.7) 30%, hsl(14 100% 57% / 0.9) 50%, hsl(0 100% 50% / 0.7) 70%, transparent 95%);
-  box-shadow: 0 0 4px hsl(0 100% 50% / 0.8), 0 0 12px hsl(14 100% 57% / 0.5), 0 0 30px hsl(0 100% 40% / 0.3);
-  animation: energy-beam-1 10s ease-in-out infinite;
+  background: linear-gradient(90deg, transparent 2%, hsl(0 100% 50% / 0.9) 20%, hsl(14 100% 57%) 50%, hsl(0 100% 50% / 0.9) 80%, transparent 98%);
+  box-shadow: 0 0 4px hsl(0 100% 50%), 0 0 12px hsl(14 100% 57% / 0.8), 0 0 30px hsl(0 100% 50% / 0.5), 0 0 60px hsl(14 100% 57% / 0.2);
+  animation: energy-beam-1 8s ease-in-out infinite;
 }
 .energy-beams::after {
   top: 75%;
-  background: linear-gradient(90deg, transparent 5%, hsl(14 100% 57% / 0.5) 25%, hsl(0 100% 50% / 0.8) 50%, hsl(14 100% 57% / 0.5) 75%, transparent 95%);
-  box-shadow: 0 0 4px hsl(14 100% 57% / 0.7), 0 0 12px hsl(0 100% 50% / 0.4), 0 0 25px hsl(0 100% 40% / 0.2);
-  animation: energy-beam-2 15s ease-in-out 3s infinite;
+  background: linear-gradient(90deg, transparent 2%, hsl(14 100% 57% / 0.8) 15%, hsl(0 100% 50%) 50%, hsl(14 100% 57% / 0.8) 85%, transparent 98%);
+  box-shadow: 0 0 4px hsl(14 100% 57%), 0 0 12px hsl(0 100% 50% / 0.7), 0 0 25px hsl(14 100% 57% / 0.4), 0 0 50px hsl(0 100% 50% / 0.2);
+  animation: energy-beam-2 12s ease-in-out 2s infinite;
 }
 
 /* Third beam via a child element */
