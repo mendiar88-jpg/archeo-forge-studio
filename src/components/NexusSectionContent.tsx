@@ -225,7 +225,7 @@ const NexusSectionContent = () => {
 
       {/* Infrastructure Node */}
       <div className="glass-card rounded-sm p-3 mb-4 border border-accent/20 bg-accent/[0.03]">
-        <h4 className="font-mono text-[10px] tracking-[0.2em] uppercase neon-text-cyan mb-2 border-b-2 border-[hsl(var(--scarlet-bright))] pb-1 inline-block">[ INFRASTRUCTURE NODE ]</h4>
+        <h4 className="font-mono text-[9px] sm:text-[10px] tracking-[0.15em] sm:tracking-[0.2em] uppercase neon-text-cyan mb-2 border-b-2 border-[hsl(var(--scarlet-bright))] pb-1 inline-block break-words">[ INFRASTRUCTURE NODE ]</h4>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full heartbeat-scarlet shrink-0" />

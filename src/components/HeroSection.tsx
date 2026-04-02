@@ -61,7 +61,7 @@ const HeroSection = () => (
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-fade-in" style={{ animationDelay: "0.6s", opacity: 0 }}>
-            <a href="#contact" className="btn-terminal btn-terminal-gold">
+            <a href="#contact" className="btn-terminal btn-terminal-gold hover:!border-[hsl(0_100%_50%)] hover:!shadow-[0_0_20px_hsl(0_100%_50%_/_0.3),0_0_40px_hsl(14_100%_57%_/_0.15)]">
               Contact Me
             </a>
             <a href="/Diego_Armando_Mendez_Resume.pdf" download className="btn-terminal">

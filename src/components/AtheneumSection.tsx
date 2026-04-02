@@ -69,7 +69,7 @@ const AtheneumSection = () => {
   const [lang, setLang] = useState<"en" | "es">("en");
 
   return (
-    <section id="atheneum" className="py-4 bg-stone-dark relative">
+    <section id="atheneum" className="py-4 bg-stone-dark relative energy-beams">
       {/* Atmospheric overlay - dimly lit library through night-vision HUD */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background/50 pointer-events-none" />
 
