@@ -225,24 +225,24 @@ const NexusSectionContent = () => {
 
       {/* Infrastructure Node */}
       <div className="glass-card rounded-sm p-3 mb-4 border border-accent/20 bg-accent/[0.03]">
-        <h4 className="font-mono text-[10px] tracking-[0.2em] uppercase neon-text-cyan mb-2">[ INFRASTRUCTURE NODE ]</h4>
+        <h4 className="font-mono text-[10px] tracking-[0.2em] uppercase neon-text-cyan mb-2 border-b-2 border-[hsl(var(--scarlet-bright))] pb-1 inline-block">[ INFRASTRUCTURE NODE ]</h4>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
           <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse shrink-0" />
+            <span className="w-2 h-2 rounded-full heartbeat-scarlet shrink-0" />
             <div>
               <p className="font-mono text-[9px] text-bone-dim uppercase tracking-wider">Dev Environment</p>
               <p className="font-mono text-[10px] text-bone leading-tight">Google Project IDX / AI Studio</p>
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse shrink-0" />
+            <span className="w-2 h-2 rounded-full heartbeat-scarlet shrink-0" style={{ animationDelay: '0.3s' }} />
             <div>
               <p className="font-mono text-[9px] text-bone-dim uppercase tracking-wider">Deployment</p>
               <p className="font-mono text-[10px] text-bone leading-tight">Firebase Global Edge Network</p>
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[hsl(var(--neon-crimson))] animate-pulse shrink-0" />
+            <span className="w-2 h-2 rounded-full heartbeat-scarlet shrink-0" style={{ animationDelay: '0.6s' }} />
             <div>
               <p className="font-mono text-[9px] text-bone-dim uppercase tracking-wider">Intelligence Layer</p>
               <p className="font-mono text-[10px] text-bone leading-tight">Gemini 1.5 Pro / Ultra Orchestration</p>

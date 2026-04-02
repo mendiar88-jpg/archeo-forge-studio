@@ -159,6 +159,8 @@ const ForgeSection = () => {
 
   return (
     <section id="forge" className="py-4 bg-stone-dark metallic-bg oil-texture relative scarlet-depth energy-beams">
+      {/* Extra energy beam */}
+      <div className="energy-beam-extra" />
       <ScrollRevealWrapper className="container mx-auto px-4 max-w-5xl relative z-10">
         {/* Header */}
         <h2 className="font-serif text-3xl md:text-4xl text-bone mb-1">The Forge</h2>
@@ -169,12 +171,12 @@ const ForgeSection = () => {
         {/* Tabbed Console Interface */}
         <div className="glass-card rounded-sm overflow-hidden">
           {/* Tab bar */}
-          <div className="flex border-b border-border bg-secondary/60">
+          <div className="flex overflow-x-auto scrollbar-hide border-b border-border bg-secondary/60">
             {tabs.map((tab) => (
               <button
                 key={tab.key}
                 onClick={() => setActiveTab(tab.key)}
-                className={`flex-1 sm:flex-none px-5 py-2.5 font-mono text-[11px] tracking-[0.15em] uppercase transition-all duration-300 border-b-2 ${
+                className={`shrink-0 px-4 sm:px-5 py-2.5 font-mono text-[11px] tracking-[0.15em] uppercase transition-all duration-300 border-b-2 whitespace-nowrap ${
                   activeTab === tab.key
                     ? "border-accent neon-text-cyan bg-accent/5"
                     : "border-transparent text-bone-dim hover:text-bone hover:bg-secondary/40"

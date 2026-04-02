@@ -12,7 +12,7 @@ const HeroSection = () => (
     <div className="relative z-10 container mx-auto px-4 max-w-5xl">
       <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
         {/* Portrait with Chiaroscuro effect - cyan/gold bloom */}
-        <div className="relative shrink-0 w-48 h-48 md:w-64 md:h-64">
+        <div className="relative shrink-0 w-[120px] h-[120px] md:w-64 md:h-64">
           <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-[hsl(185_100%_42%_/_0.2)] via-transparent to-[hsl(43_90%_55%_/_0.15)] blur-xl opacity-70" />
           <div className="relative w-full h-full rounded-full overflow-hidden border border-[hsl(185_100%_42%_/_0.25)] shadow-[0_0_30px_hsl(185_100%_42%_/_0.15),0_0_60px_hsl(43_90%_55%_/_0.08),0_0_80px_hsl(0_100%_27%_/_0.05)]">
             <img
