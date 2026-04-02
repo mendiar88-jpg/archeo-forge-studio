@@ -171,12 +171,12 @@ const ForgeSection = () => {
         {/* Tabbed Console Interface */}
         <div className="glass-card rounded-sm overflow-hidden">
           {/* Tab bar */}
-          <div className="flex border-b border-border bg-secondary/60">
+          <div className="flex overflow-x-auto scrollbar-hide border-b border-border bg-secondary/60">
             {tabs.map((tab) => (
               <button
                 key={tab.key}
                 onClick={() => setActiveTab(tab.key)}
-                className={`flex-1 sm:flex-none px-5 py-2.5 font-mono text-[11px] tracking-[0.15em] uppercase transition-all duration-300 border-b-2 ${
+                className={`shrink-0 px-4 sm:px-5 py-2.5 font-mono text-[11px] tracking-[0.15em] uppercase transition-all duration-300 border-b-2 whitespace-nowrap ${
                   activeTab === tab.key
                     ? "border-accent neon-text-cyan bg-accent/5"
                     : "border-transparent text-bone-dim hover:text-bone hover:bg-secondary/40"
