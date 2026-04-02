@@ -2,7 +2,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 import portrait from "@/assets/diego-portrait.jpg";
 
 const HeroSection = () => (
-  <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0">
     {/* BG */}
     <div className="absolute inset-0">
       <img src={heroBg} alt="" className="w-full h-full object-cover opacity-20" width={1920} height={1080} />
