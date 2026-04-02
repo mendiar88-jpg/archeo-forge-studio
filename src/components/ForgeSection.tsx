@@ -159,6 +159,8 @@ const ForgeSection = () => {
 
   return (
     <section id="forge" className="py-4 bg-stone-dark metallic-bg oil-texture relative scarlet-depth energy-beams">
+      {/* Extra energy beam */}
+      <div className="energy-beam-extra" />
       <ScrollRevealWrapper className="container mx-auto px-4 max-w-5xl relative z-10">
         {/* Header */}
         <h2 className="font-serif text-3xl md:text-4xl text-bone mb-1">The Forge</h2>
