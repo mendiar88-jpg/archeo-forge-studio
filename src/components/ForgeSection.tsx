@@ -3,6 +3,7 @@ import { ChevronDown, Terminal, ChevronRight } from "lucide-react";
 import ScrollRevealWrapper from "@/components/ScrollRevealWrapper";
 import SystemsMasteriesContent from "@/components/SystemsMasteriesContent";
 import NexusSectionContent from "@/components/NexusSectionContent";
+import ScarletSparkles from "@/components/ScarletSparkles";
 
 const roles = [
   {
@@ -169,9 +170,10 @@ const ForgeSection = () => {
         </p>
 
         {/* Tabbed Console Interface */}
-        <div className="glass-card rounded-sm overflow-hidden">
+        <div className="relative glass-card rounded-sm overflow-hidden">
+          <ScarletSparkles count={5} />
           {/* Tab bar */}
-          <div className="flex overflow-x-auto scrollbar-hide border-b border-border bg-secondary/60">
+          <div className="relative flex overflow-x-auto scrollbar-hide border-b border-border bg-secondary/60">
             {tabs.map((tab) => (
               <button
                 key={tab.key}
@@ -235,7 +237,8 @@ const ForgeSection = () => {
                   <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-bone-dim mb-4">
                     Freelance &amp; Community Service
                   </p>
-                  <div className="space-y-3">
+                  <div className="relative space-y-3 energy-beams">
+                    <div className="energy-beam-extra" />
                     {freelanceRoles.map((role, i) => (
                       <FreelanceNode key={i} role={role} />
                     ))}

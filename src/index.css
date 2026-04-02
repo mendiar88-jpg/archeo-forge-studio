@@ -360,6 +360,13 @@
   animation: industrial-pulse 3s ease-in-out infinite;
 }
 
+/* Scarlet sparkle bloom for data-processing effect */
+@keyframes sparkle-bloom {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  30% { opacity: 1; transform: scale(1); }
+  70% { opacity: 0.8; transform: scale(1.2); }
+}
+
 /* ═══ SCARLET ENERGY BEAMS (High-Voltage Neon) ═══ */
 @keyframes energy-beam-1 {
   0% { transform: translateX(-120%); opacity: 0; }
