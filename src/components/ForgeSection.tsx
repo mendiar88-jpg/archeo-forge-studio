@@ -3,6 +3,7 @@ import { ChevronDown, Terminal, ChevronRight } from "lucide-react";
 import ScrollRevealWrapper from "@/components/ScrollRevealWrapper";
 import SystemsMasteriesContent from "@/components/SystemsMasteriesContent";
 import NexusSectionContent from "@/components/NexusSectionContent";
+import ScarletSparkles from "@/components/ScarletSparkles";
 
 const roles = [
   {
