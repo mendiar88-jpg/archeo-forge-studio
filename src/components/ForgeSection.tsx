@@ -170,9 +170,10 @@ const ForgeSection = () => {
         </p>
 
         {/* Tabbed Console Interface */}
-        <div className="glass-card rounded-sm overflow-hidden">
+        <div className="relative glass-card rounded-sm overflow-hidden">
+          <ScarletSparkles count={5} />
           {/* Tab bar */}
-          <div className="flex overflow-x-auto scrollbar-hide border-b border-border bg-secondary/60">
+          <div className="relative flex overflow-x-auto scrollbar-hide border-b border-border bg-secondary/60">
             {tabs.map((tab) => (
               <button
                 key={tab.key}
