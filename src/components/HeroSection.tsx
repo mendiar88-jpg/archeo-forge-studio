@@ -9,7 +9,7 @@ const HeroSection = () => (
       <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/90 to-background" />
     </div>
 
-    <div className="relative z-10 container mx-auto px-4 max-w-5xl">
+    <div className="relative z-10 container mx-auto px-4 max-w-5xl py-4 md:py-0">
       <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
         {/* Portrait with Chiaroscuro effect - cyan/gold bloom */}
         <div className="relative shrink-0 w-[100px] h-[100px] md:w-64 md:h-64">
