@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Cpu, Shield, BookOpen, Sparkles } from "lucide-react";
+import ScarletSparkles from "@/components/ScarletSparkles";
 
 const skillDescriptions: Record<string, string> = {
   "Customer Success Management": "[STATUS: ACTIVE] - Orchestrating end-to-end customer lifecycle with strategic precision across BPO ecosystems.",
