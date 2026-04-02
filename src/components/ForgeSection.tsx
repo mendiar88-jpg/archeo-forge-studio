@@ -239,6 +239,7 @@ const ForgeSection = () => {
                   </p>
                   <div className="relative space-y-3 energy-beams">
                     <div className="energy-beam-extra" />
+                    {freelanceRoles.map((role, i) => (
                       <FreelanceNode key={i} role={role} />
                     ))}
                   </div>
