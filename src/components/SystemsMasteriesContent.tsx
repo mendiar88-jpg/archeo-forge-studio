@@ -158,7 +158,8 @@ const SystemsMasteriesContent = () => {
         {categories.map((cat) => {
           const Icon = cat.icon;
           return (
-            <div key={cat.subtitle} className="glass-card p-5 rounded-sm ironforge-hover">
+            <div key={cat.subtitle} className="relative glass-card p-5 rounded-sm ironforge-hover">
+              <ScarletSparkles count={4} />
               <div className="flex items-center gap-3 mb-1">
                 <Icon size={16} className={`${cat.color === "gold" ? "neon-text-gold" : "neon-text-cyan"} icon-heated`} />
                 <h3 className="font-serif text-base text-bone">{cat.title}</h3>

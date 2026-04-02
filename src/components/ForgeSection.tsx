@@ -237,8 +237,8 @@ const ForgeSection = () => {
                   <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-bone-dim mb-4">
                     Freelance &amp; Community Service
                   </p>
-                  <div className="space-y-3">
-                    {freelanceRoles.map((role, i) => (
+                  <div className="relative space-y-3 energy-beams">
+                    <div className="energy-beam-extra" />
                       <FreelanceNode key={i} role={role} />
                     ))}
                   </div>
