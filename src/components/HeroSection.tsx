@@ -47,6 +47,12 @@ const HeroSection = () => (
           <h1 className="font-serif text-2xl sm:text-4xl md:text-6xl font-bold tracking-wider text-bone mb-4 md:mb-6 animate-fade-in">
             DIEGO ARMANDO MÉNDEZ
           </h1>
+          {/* Scarlet beam below name */}
+          <div className="h-px w-full mb-4" style={{
+            background: 'linear-gradient(90deg, transparent 5%, hsl(0 100% 50% / 0.8) 30%, hsl(14 100% 57%) 50%, hsl(0 100% 50% / 0.8) 70%, transparent 95%)',
+            boxShadow: '0 0 4px hsl(0 100% 50%), 0 0 12px hsl(14 100% 57% / 0.6), 0 0 30px hsl(0 100% 50% / 0.3)',
+            animation: 'energy-beam-1 10s ease-in-out infinite',
+          }} />
 
           <div className="mb-8 animate-fade-in overflow-hidden" style={{ animationDelay: "0.2s", opacity: 0 }}>
             <h2 className="typing-effect font-mono text-sm sm:text-base md:text-lg neon-text-cyan mx-auto md:mx-0 max-w-fit">
