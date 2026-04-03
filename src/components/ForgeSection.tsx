@@ -160,8 +160,9 @@ const ForgeSection = () => {
 
   return (
     <section id="forge" className="py-4 bg-stone-dark metallic-bg oil-texture relative scarlet-depth energy-beams">
-      {/* Extra energy beam */}
+      {/* Extra energy beams */}
       <div className="energy-beam-extra" />
+      <div className="energy-beam-extra-2" />
       <ScrollRevealWrapper className="container mx-auto px-4 max-w-5xl relative z-10">
         {/* Header */}
         <h2 className="font-serif text-3xl md:text-4xl text-bone mb-1">The Forge</h2>
@@ -180,7 +181,7 @@ const ForgeSection = () => {
                 onClick={() => setActiveTab(tab.key)}
                 className={`shrink-0 px-4 sm:px-5 py-2.5 font-mono text-[11px] tracking-[0.15em] uppercase transition-all duration-300 border-b-2 whitespace-nowrap ${
                   activeTab === tab.key
-                    ? "border-[hsl(14_100%_57%)] neon-text-cyan bg-accent/5 shadow-[0_2px_8px_hsl(0_100%_50%_/_0.3)]"
+                    ? "border-[hsl(0_100%_50%)] neon-text-cyan bg-accent/5 shadow-[0_2px_12px_hsl(0_100%_50%_/_0.4),0_0_30px_hsl(14_100%_57%_/_0.2)]"
                     : "border-transparent text-bone-dim hover:text-bone hover:bg-secondary/40"
                 }`}
               >
@@ -237,8 +238,9 @@ const ForgeSection = () => {
                   <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-bone-dim mb-4">
                     Freelance &amp; Community Service
                   </p>
-                  <div className="relative space-y-3 energy-beams">
-                    <div className="energy-beam-extra" />
+                   <div className="relative space-y-3 energy-beams">
+                     <div className="energy-beam-extra" />
+                     <div className="energy-beam-extra-2" />
                     {freelanceRoles.map((role, i) => (
                       <FreelanceNode key={i} role={role} />
                     ))}
