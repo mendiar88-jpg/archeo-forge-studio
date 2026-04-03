@@ -181,7 +181,7 @@ const ForgeSection = () => {
                 onClick={() => setActiveTab(tab.key)}
                 className={`shrink-0 px-4 sm:px-5 py-2.5 font-mono text-[11px] tracking-[0.15em] uppercase transition-all duration-300 border-b-2 whitespace-nowrap ${
                   activeTab === tab.key
-                    ? "border-[hsl(14_100%_57%)] neon-text-cyan bg-accent/5 shadow-[0_2px_8px_hsl(0_100%_50%_/_0.3)]"
+                    ? "border-[hsl(0_100%_50%)] neon-text-cyan bg-accent/5 shadow-[0_2px_12px_hsl(0_100%_50%_/_0.4),0_0_30px_hsl(14_100%_57%_/_0.2)]"
                     : "border-transparent text-bone-dim hover:text-bone hover:bg-secondary/40"
                 }`}
               >
