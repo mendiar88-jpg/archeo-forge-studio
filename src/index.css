@@ -372,24 +372,32 @@
   70% { opacity: 0.8; transform: scale(1.2); }
 }
 
-/* ═══ SCARLET ENERGY BEAMS (High-Voltage Neon) ═══ */
+/* ═══ SCARLET ENERGY BEAMS — Chronos-Grade High-Voltage Neon ═══ */
 @keyframes energy-beam-1 {
   0% { transform: translateX(-120%); opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 1; }
+  5% { opacity: 1; }
+  95% { opacity: 1; }
   100% { transform: translateX(120%); opacity: 0; }
 }
 @keyframes energy-beam-2 {
   0% { transform: translateX(120%); opacity: 0; }
-  15% { opacity: 0.8; }
-  85% { opacity: 0.8; }
+  8% { opacity: 0.9; }
+  92% { opacity: 0.9; }
   100% { transform: translateX(-120%); opacity: 0; }
 }
 @keyframes energy-beam-3 {
-  0% { transform: translateX(-150%) scaleX(0.5); opacity: 0; }
-  20% { opacity: 0.6; }
-  80% { opacity: 0.6; }
-  100% { transform: translateX(150%) scaleX(0.5); opacity: 0; }
+  0% { transform: translateX(-150%) scaleX(0.6); opacity: 0; }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.8; }
+  100% { transform: translateX(150%) scaleX(0.6); opacity: 0; }
+}
+@keyframes energy-beam-pulse {
+  0%, 100% {
+    box-shadow: 0 0 4px hsl(0 100% 50%), 0 0 10px hsl(0 100% 50%);
+  }
+  50% {
+    box-shadow: 0 0 8px hsl(0 100% 50%), 0 0 20px hsl(0 100% 50%), 0 0 40px hsl(14 100% 57% / 0.6), 0 0 80px hsl(0 100% 50% / 0.3);
+  }
 }
 
 .energy-beams {
@@ -402,35 +410,48 @@
   position: absolute;
   left: 0;
   right: 0;
-  height: 1px;
+  height: 2px;
   pointer-events: none;
   z-index: 1;
+  animation-fill-mode: both;
 }
 .energy-beams::before {
   top: 25%;
-  background: linear-gradient(90deg, transparent 2%, hsl(0 100% 50% / 0.9) 20%, hsl(14 100% 57%) 50%, hsl(0 100% 50% / 0.9) 80%, transparent 98%);
-  box-shadow: 0 0 4px hsl(0 100% 50%), 0 0 12px hsl(14 100% 57% / 0.8), 0 0 30px hsl(0 100% 50% / 0.5), 0 0 60px hsl(14 100% 57% / 0.2);
-  animation: energy-beam-1 8s ease-in-out infinite;
+  background: linear-gradient(90deg, transparent 0%, hsl(0 100% 50% / 0.6) 10%, hsl(0 100% 55%) 30%, hsl(14 100% 57%) 50%, hsl(0 100% 55%) 70%, hsl(0 100% 50% / 0.6) 90%, transparent 100%);
+  box-shadow: 0 0 6px hsl(0 100% 50%), 0 0 15px hsl(0 100% 50% / 0.9), 0 0 40px hsl(14 100% 57% / 0.6), 0 0 80px hsl(0 100% 50% / 0.3);
+  animation: energy-beam-1 7s ease-in-out infinite, energy-beam-pulse 2s ease-in-out infinite;
 }
 .energy-beams::after {
   top: 75%;
-  background: linear-gradient(90deg, transparent 2%, hsl(14 100% 57% / 0.8) 15%, hsl(0 100% 50%) 50%, hsl(14 100% 57% / 0.8) 85%, transparent 98%);
-  box-shadow: 0 0 4px hsl(14 100% 57%), 0 0 12px hsl(0 100% 50% / 0.7), 0 0 25px hsl(14 100% 57% / 0.4), 0 0 50px hsl(0 100% 50% / 0.2);
-  animation: energy-beam-2 12s ease-in-out 2s infinite;
+  background: linear-gradient(90deg, transparent 0%, hsl(14 100% 57% / 0.6) 10%, hsl(0 100% 50%) 35%, hsl(14 100% 57%) 50%, hsl(0 100% 50%) 65%, hsl(14 100% 57% / 0.6) 90%, transparent 100%);
+  box-shadow: 0 0 6px hsl(14 100% 57%), 0 0 15px hsl(0 100% 50% / 0.8), 0 0 40px hsl(14 100% 57% / 0.5), 0 0 80px hsl(0 100% 50% / 0.25);
+  animation: energy-beam-2 10s ease-in-out 1.5s infinite, energy-beam-pulse 2.5s ease-in-out 0.5s infinite;
 }
 
-/* Third beam via a child element */
+/* Extra beams via child elements */
 .energy-beam-extra {
   position: absolute;
   left: 0;
   right: 0;
   top: 50%;
+  height: 2px;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(90deg, transparent, hsl(0 100% 55% / 0.7) 25%, hsl(14 100% 57%) 50%, hsl(0 100% 55% / 0.7) 75%, transparent);
+  box-shadow: 0 0 6px hsl(0 100% 50%), 0 0 18px hsl(14 100% 57% / 0.9), 0 0 45px hsl(0 100% 50% / 0.5), 0 0 80px hsl(14 100% 57% / 0.25);
+  animation: energy-beam-3 18s ease-in-out 4s infinite, energy-beam-pulse 3s ease-in-out 1s infinite;
+}
+.energy-beam-extra-2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 38%;
   height: 1px;
   pointer-events: none;
   z-index: 1;
-  background: linear-gradient(90deg, transparent, hsl(0 100% 50% / 0.85) 35%, hsl(14 100% 57%) 50%, hsl(0 100% 50% / 0.85) 65%, transparent);
-  box-shadow: 0 0 4px hsl(0 100% 50%), 0 0 15px hsl(14 100% 57% / 0.8), 0 0 35px hsl(0 100% 50% / 0.5), 0 0 60px hsl(14 100% 57% / 0.2);
-  animation: energy-beam-3 22s ease-in-out 6s infinite;
+  background: linear-gradient(90deg, transparent, hsl(0 100% 50% / 0.5) 30%, hsl(14 100% 57% / 0.8) 50%, hsl(0 100% 50% / 0.5) 70%, transparent);
+  box-shadow: 0 0 4px hsl(0 100% 50%), 0 0 12px hsl(14 100% 57% / 0.7), 0 0 30px hsl(0 100% 50% / 0.4);
+  animation: energy-beam-1 14s ease-in-out 3s infinite;
 }
 
 /* ═══ SCARLET HEARTBEAT PULSE for status dots ═══ */
