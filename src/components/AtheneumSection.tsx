@@ -70,6 +70,9 @@ const AtheneumSection = () => {
 
   return (
     <section id="atheneum" className="py-4 bg-stone-dark relative energy-beams">
+      {/* Extra energy beams */}
+      <div className="energy-beam-extra" />
+      <div className="energy-beam-extra-2" />
       {/* Atmospheric overlay - dimly lit library through night-vision HUD */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background/50 pointer-events-none" />
 

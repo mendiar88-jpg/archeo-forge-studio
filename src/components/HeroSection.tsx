@@ -5,6 +5,7 @@ const HeroSection = () => (
   <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0 energy-beams">
     {/* Extra energy beams */}
     <div className="energy-beam-extra" />
+    <div className="energy-beam-extra-2" />
     {/* BG */}
     <div className="absolute inset-0">
       <img src={heroBg} alt="" className="w-full h-full object-cover opacity-20" width={1920} height={1080} />
