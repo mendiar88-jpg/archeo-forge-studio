@@ -55,13 +55,13 @@ const HeroSection = () => (
             animation: 'energy-beam-1 10s ease-in-out infinite',
           }} />
 
-          <div className="mb-6 md:mb-8 animate-fade-in overflow-hidden" style={{ animationDelay: "0.2s", opacity: 0 }}>
-            <h2 className="typing-effect font-mono text-[10px] sm:text-sm md:text-lg neon-text-cyan mx-auto md:mx-0 max-w-fit whitespace-normal sm:whitespace-nowrap">
+          <div className="mb-6 md:mb-8 animate-fade-in" style={{ animationDelay: "0.2s", opacity: 0 }}>
+            <h2 className="sm:typing-effect font-mono text-[10px] sm:text-sm md:text-lg neon-text-cyan mx-auto md:mx-0 max-w-full sm:max-w-fit whitespace-normal sm:whitespace-nowrap leading-relaxed sm:leading-normal">
               Bilingual Operations Orchestrator | Customer Success &amp; Case Management Specialist | AI Workflow Automation
             </h2>
           </div>
 
-          <p className="font-sans text-xs sm:text-sm md:text-base text-bone-dim leading-relaxed max-w-3xl mb-6 md:mb-10 animate-fade-in" style={{ animationDelay: "0.4s", opacity: 0 }}>
+          <p className="font-sans text-xs sm:text-sm md:text-base text-bone-dim leading-relaxed max-w-full sm:max-w-3xl mb-6 md:mb-10 animate-fade-in px-1 sm:px-0 break-words" style={{ animationDelay: "0.4s", opacity: 0 }}>
             Bilingual (EN/ES C1) Operations professional with 10+ years across BPO, Healthcare,
             Financial Services, and Government sectors. Proven track record managing end-to-end customer lifecycles, case
             resolution, and compliance-driven workflows for U.S. clients including Capital One (Sutherland) and
