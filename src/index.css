@@ -241,38 +241,38 @@
   animation: typing 3.5s steps(60, end) forwards, blink-cursor 0.8s step-end infinite;
 }
 
-/* Neon glow utilities - Cyan (primary tech), Gold (authority), Scarlet (energy/anomaly) */
+/* Neon glow utilities — Chronos-grade intensity */
 .neon-glow-cyan {
-  box-shadow: 0 0 10px hsl(185 100% 42% / 0.3), 0 0 30px hsl(185 100% 50% / 0.15);
+  box-shadow: 0 0 15px hsl(185 100% 42% / 0.4), 0 0 40px hsl(185 100% 50% / 0.2);
 }
 .neon-glow-gold {
-  box-shadow: 0 0 10px hsl(43 90% 55% / 0.2), 0 0 30px hsl(43 90% 55% / 0.1);
+  box-shadow: 0 0 15px hsl(43 90% 55% / 0.4), 0 0 40px hsl(43 90% 55% / 0.2);
 }
 .neon-glow-scarlet {
-  box-shadow: 0 0 10px hsl(0 100% 27% / 0.3), 0 0 30px hsl(14 100% 57% / 0.15), 0 0 60px hsl(0 100% 27% / 0.08);
+  box-shadow: 0 0 15px hsl(0 100% 50% / 0.5), 0 0 40px hsl(0 100% 50% / 0.3), 0 0 60px hsl(14 100% 57% / 0.15);
 }
 .neon-text-cyan {
   color: hsl(185 100% 50%);
-  text-shadow: 0 0 10px hsl(185 100% 50% / 0.5), 0 0 20px hsl(185 100% 42% / 0.3);
+  text-shadow: 0 0 10px hsl(185 100% 50% / 0.6), 0 0 25px hsl(185 100% 42% / 0.3), 0 0 40px hsl(185 100% 50% / 0.15);
 }
 .neon-text-gold {
   color: hsl(43 90% 55%);
-  text-shadow: 0 0 10px hsl(43 90% 55% / 0.5);
+  text-shadow: 0 0 10px hsl(43 90% 55% / 0.6), 0 0 25px hsl(43 90% 55% / 0.3);
 }
 .neon-text-scarlet {
   color: hsl(14 100% 57%);
-  text-shadow: 0 0 10px hsl(14 100% 57% / 0.5), 0 0 20px hsl(0 100% 27% / 0.3);
+  text-shadow: 0 0 10px hsl(14 100% 57% / 0.6), 0 0 25px hsl(0 100% 50% / 0.4), 0 0 40px hsl(0 100% 50% / 0.2);
 }
 
-/* Bloom effects */
+/* Bloom effects — Chronos-grade */
 .bloom-cyan {
-  filter: drop-shadow(0 0 8px hsl(185 100% 50% / 0.4)) drop-shadow(0 0 20px hsl(185 100% 42% / 0.2));
+  filter: drop-shadow(0 0 10px hsl(185 100% 50% / 0.5)) drop-shadow(0 0 25px hsl(185 100% 42% / 0.3));
 }
 .bloom-gold {
-  filter: drop-shadow(0 0 8px hsl(43 90% 55% / 0.4)) drop-shadow(0 0 20px hsl(43 90% 55% / 0.15));
+  filter: drop-shadow(0 0 10px hsl(43 90% 55% / 0.5)) drop-shadow(0 0 25px hsl(43 90% 55% / 0.2));
 }
 .bloom-scarlet {
-  filter: drop-shadow(0 0 8px hsl(14 100% 57% / 0.5)) drop-shadow(0 0 20px hsl(0 100% 27% / 0.25));
+  filter: drop-shadow(0 0 10px hsl(0 100% 50% / 0.6)) drop-shadow(0 0 25px hsl(14 100% 57% / 0.35)) drop-shadow(0 0 50px hsl(0 100% 50% / 0.15));
 }
 
 /* Glitch hover effect for titles */
