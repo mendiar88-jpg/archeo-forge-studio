@@ -41,7 +41,7 @@
     --gold-dim: 43 60% 40%;
     --neon-cyan: 185 100% 42%;
     --neon-crimson: 0 100% 27%;
-    --scarlet: 0 100% 27%;
+    --scarlet: 0 100% 50%;
     --scarlet-bright: 14 100% 57%;
     --stone-dark: 0 0% 0%;
     --stone: 0 0% 5%;
@@ -49,6 +49,11 @@
     --bone: 40 20% 90%;
     --bone-dim: 40 10% 55%;
     --aged-gold: 40 50% 50%;
+
+    /* Chronos-style glow variables */
+    --glow-scarlet: 0 0 20px hsl(0 100% 50% / 0.5), 0 0 40px hsl(0 100% 50% / 0.3), 0 0 60px hsl(14 100% 57% / 0.15);
+    --glow-cyan: 0 0 20px hsl(185 100% 50% / 0.5), 0 0 40px hsl(185 100% 50% / 0.3);
+    --glow-gold: 0 0 20px hsl(43 90% 55% / 0.5), 0 0 40px hsl(43 90% 55% / 0.3);
 
     --sidebar-background: 0 0% 3%;
     --sidebar-foreground: 40 20% 90%;
