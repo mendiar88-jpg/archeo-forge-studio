@@ -555,3 +555,35 @@
     color: hsl(var(--neon-cyan));
   }
 }
+
+/* ═══ Logo scale-in animation ═══ */
+@keyframes logo-in {
+  0% { opacity: 0; transform: scale(0.7); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.animate-logo-in {
+  animation: logo-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ═══ Spinning rings for portrait ═══ */
+@keyframes spin-ring {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-ring {
+  animation: spin-ring 25s linear infinite;
+}
+.animate-spin-ring-reverse {
+  animation: spin-ring 35s linear infinite reverse;
+}
+
+/* ═══ Floating rune animation ═══ */
+@keyframes float-rune {
+  0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+}
+.animate-float-rune {
+  animation: float-rune 20s linear infinite;
+}

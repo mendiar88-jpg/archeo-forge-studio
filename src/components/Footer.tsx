@@ -30,7 +30,10 @@ const Footer = () => (
 
       <div className="text-center mt-6">
         <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-bone-dim">
-          © {new Date().getFullYear()} Diego Armando Méndez — Built with precision.
+          © {new Date().getFullYear()} Diego Armando Méndez — Diakos Logic &amp; DevMind
+        </p>
+        <p className="font-mono text-[8px] tracking-[0.1em] uppercase text-bone-dim/40 mt-1">
+          Built with precision. Powered by vision.
         </p>
       </div>
     </ScrollRevealWrapper>
