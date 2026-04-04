@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import damLogo from "@/assets/dam-logo.png";
 
 const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
   const [progress, setProgress] = useState(0);
@@ -34,17 +35,19 @@ const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
 
   return (
     <div className="fixed inset-0 z-[200] bg-background flex flex-col items-center justify-center">
-      {/* Corner accents - cyan */}
+      {/* Corner accents */}
       <div className="absolute top-0 left-0 w-16 h-16 border-l-2 border-t-2 border-accent/40" />
       <div className="absolute top-0 right-0 w-16 h-16 border-r-2 border-t-2 border-primary/40" />
       <div className="absolute bottom-0 left-0 w-16 h-16 border-l-2 border-b-2 border-primary/40" />
       <div className="absolute bottom-0 right-0 w-16 h-16 border-r-2 border-b-2 border-accent/40" />
 
-      {/* Monogram */}
+      {/* Logo */}
       <div className="relative mb-8">
-        <h1 className="font-serif text-6xl md:text-8xl font-bold tracking-[0.3em] neon-text-gold bloom-gold">
-          D.A.M.
-        </h1>
+        <img
+          src={damLogo}
+          alt="D.A.M."
+          className="max-w-[min(320px,80vw)] h-auto animate-logo-in bloom-gold"
+        />
         <div className="absolute -bottom-2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent to-transparent" />
       </div>
 
