@@ -269,6 +269,351 @@ footer span{color:var(--gold-md)}
   .hero-name{font-size:1.8rem}
 }
 </style>
+
+<style id="lovable-neon-overlay">
+/* ═══ COMPACT SPACING ═══ */
+.section-wrap { padding: 3.5rem 1.5rem !important; }
+.arc-div { padding: .2rem 0 !important; letter-spacing: .8rem !important; font-size:.8rem !important; }
+#hero { padding-top: 70px !important; padding-bottom: 2.5rem !important; }
+.sec-head { margin-bottom: 2rem !important; }
+.tl-item { margin-bottom: 1.25rem !important; padding: 1rem 1.1rem !important; }
+.wiki-card { padding: 1.25rem 1.1rem !important; }
+.sys-col { padding: 1.25rem 1.1rem !important; }
+.trait-card { padding: 1rem .9rem !important; }
+.nexus-card { padding: 1.25rem !important; }
+.hero-inner { gap: 3rem !important; }
+.hero-bio { margin-bottom: 1.25rem !important; }
+.hero-ctas { margin-bottom: 1.5rem !important; }
+.hero-stats { gap: 1rem !important; }
+.hstat-n { font-size: 1.5rem !important; }
+.architect-quote { padding: 1.5rem 1.5rem 1.5rem 2rem !important; margin-bottom: 1.25rem !important; }
+.mbti-bars { margin-top: 1.25rem !important; }
+.mbti-row { margin-bottom: .7rem !important; }
+.forge-tabs { margin-bottom: 1.5rem !important; }
+.contact-inner { padding: 0 1.5rem !important; }
+.transmit-form { padding: 1.75rem !important; }
+.form-group { margin-bottom: .9rem !important; }
+#contact { padding: 3.5rem 1.5rem !important; }
+
+/* ═══ LOVABLE NAV STYLE ═══ */
+.nav-brand {
+  font-family: 'Share Tech Mono', monospace !important;
+  font-size: 1rem !important;
+  letter-spacing: .15em !important;
+  color: #d4a017 !important;
+  text-shadow: 0 0 12px rgba(212,160,23,.6), 0 0 28px rgba(212,160,23,.25) !important;
+}
+.nav-links a {
+  font-size: .65rem !important;
+  letter-spacing: .22em !important;
+  color: rgba(0,220,255,.7) !important;
+}
+.nav-links a:hover { color: #00e5ff !important; text-shadow: 0 0 8px rgba(0,229,255,.7) !important; }
+
+/* ═══ LOVABLE SECTION TITLES ═══ */
+.sec-title {
+  font-family: 'EB Garamond', Georgia, serif !important;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem) !important;
+  font-weight: 400 !important;
+  letter-spacing: .02em !important;
+  color: #f5f0e8 !important;
+}
+.sec-tag {
+  font-size: .58rem !important;
+  letter-spacing: .3em !important;
+  color: #00ccff !important;
+  text-shadow: 0 0 8px rgba(0,200,255,.5) !important;
+}
+
+/* ═══ POLYMATH BADGE — PROMINENT ═══ */
+.polymath-banner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, rgba(212,160,23,.08), rgba(0,180,220,.06));
+  border: 1px solid rgba(212,160,23,.45);
+  border-left: 3px solid #d4a017;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.polymath-label {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: .65rem;
+  letter-spacing: .25em;
+  color: #ffd966;
+  text-shadow: 0 0 10px rgba(255,217,102,.5);
+  text-transform: uppercase;
+}
+.polymath-domains {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: .58rem;
+  letter-spacing: .1em;
+  color: rgba(0,200,255,.6);
+  margin-top: .2rem;
+}
+
+/* ═══ LOVABLE SKILL BARS — BLOCK/PIXEL STYLE ═══ */
+.sys-bar { height: 8px !important; background: transparent !important; position: relative !important; }
+.sys-fill {
+  height: 100% !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  position: relative !important;
+}
+.sys-fill::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #00ccff 0px, #00ccff 6px,
+    transparent 6px, transparent 9px
+  );
+  box-shadow: 0 0 6px rgba(0,200,255,.5);
+}
+.sys-skill-pct { color: #00ccff !important; text-shadow: 0 0 6px rgba(0,200,255,.6) !important; }
+.sys-skill-lvl {
+  font-size: .52rem !important;
+  color: rgba(0,200,255,.5) !important;
+}
+.sys-skill-name { color: rgba(221,213,192,.85) !important; }
+.sys-col-title { color: #d4a017 !important; text-shadow: 0 0 10px rgba(212,160,23,.4) !important; }
+.sys-col-sub { color: #00ccff !important; letter-spacing: .2em !important; }
+.sys-col { background: rgba(5,5,10,.9) !important; border-color: rgba(0,180,220,.2) !important; }
+
+/* ═══ LOVABLE FORGE TABS ═══ */
+.forge-tab { font-size: .65rem !important; letter-spacing: .15em !important; padding: .65rem 1.2rem !important; color: rgba(0,200,255,.45) !important; }
+.forge-tab.active { color: #00ccff !important; border-bottom-color: #d4a017 !important; background: rgba(0,180,220,.06) !important; }
+.sec-title + * .forge-tab, .forge-tab:hover { color: rgba(0,200,255,.7) !important; }
+
+/* ═══ LOVABLE ATHENEUM CARDS ═══ */
+.wiki-cat { font-size: .56rem !important; color: #00ccff !important; text-shadow: 0 0 6px rgba(0,200,255,.4) !important; }
+.wiki-title { font-family: 'EB Garamond', Georgia, serif !important; font-size: 1.05rem !important; font-weight: 600 !important; }
+.wiki-excerpt { font-size: .85rem !important; line-height: 1.65 !important; }
+.wiki-axiom { font-size: .58rem !important; color: #00ccff !important; text-shadow: 0 0 6px rgba(0,200,255,.4) !important; border-top-color: rgba(0,180,220,.2) !important; }
+.wiki-card { border-color: rgba(0,180,220,.18) !important; background: rgba(5,8,18,.9) !important; }
+.wiki-card:hover { border-color: rgba(0,200,255,.5) !important; box-shadow: 0 0 20px rgba(0,200,255,.12) !important; }
+
+/* ═══ LOVABLE TIMELINE ═══ */
+.tl-title { font-family: 'EB Garamond', Georgia, serif !important; font-size: 1.05rem !important; }
+.tl-company { color: #00ccff !important; font-size: .68rem !important; }
+.tl-date { color: #d4a017 !important; }
+.tl-bullets li::before { color: #00ccff !important; }
+.svc-note { border-left-color: #d4a017 !important; font-size: .63rem !important; }
+.tl-node { background: #d4a017 !important; }
+.timeline::before { background: linear-gradient(180deg, #d4a017, #00aacc, #d4a017) !important; }
+
+/* ═══ LOVABLE INTJ + POLYMATH ═══ */
+.intj-badge { background: rgba(5,8,18,.95) !important; border-color: rgba(0,180,220,.35) !important; }
+.intj-code { font-size: 1rem !important; text-shadow: 0 0 10px rgba(77,159,224,.7) !important; }
+.intj-label { font-size: .58rem !important; }
+.architect-quote { border-left-color: #00ccff !important; background: rgba(0,10,22,.85) !important; border-color: rgba(0,180,220,.2) !important; }
+.trait-card { border-color: rgba(212,160,23,.2) !important; background: rgba(5,8,18,.9) !important; }
+.trait-name { color: #00ccff !important; text-shadow: 0 0 6px rgba(0,200,255,.4) !important; }
+.mbti-fill { background: linear-gradient(90deg, #d4a017, #00ccff) !important; }
+.mbti-l { color: #00ccff !important; }
+
+/* ═══ LOVABLE CONTACT ═══ */
+.cn-val { font-family: 'Share Tech Mono', monospace !important; font-size: .78rem !important; }
+.cn-label { color: #00ccff !important; }
+.btn-transmit { border-color: rgba(0,200,255,.45) !important; color: #00ccff !important; }
+.btn-transmit:hover { box-shadow: 0 0 20px rgba(0,200,255,.3) !important; }
+.form-input, .form-textarea { border-color: rgba(0,180,220,.2) !important; font-size: .78rem !important; }
+.form-label { font-size: .58rem !important; color: rgba(0,200,255,.7) !important; }
+.form-input:focus, .form-textarea:focus { border-color: #00ccff !important; }
+
+/* ═══ NEXUS ═══ */
+.nexus-card { border-color: rgba(0,180,220,.22) !important; background: rgba(5,8,18,.9) !important; }
+.nexus-title { font-family: 'EB Garamond', serif !important; }
+.nexus-sub { color: #00ccff !important; }
+.nexus-quote { border-left-color: #d4a017 !important; font-size: .88rem !important; }
+.nexus-btn { border-color: rgba(0,180,220,.25) !important; color: rgba(0,200,255,.7) !important; font-size: .58rem !important; }
+
+/* ═══ NEON BORDER INTENSIFICATION ═══ */
+.tl-item { border-color: rgba(0,180,220,.12) !important; }
+.tl-item:hover { border-color: rgba(0,200,255,.35) !important; box-shadow: 0 0 15px rgba(0,180,220,.08) !important; }
+.tag-b { background: rgba(0,100,180,.18) !important; border-color: rgba(0,180,220,.3) !important; color: rgba(0,220,255,.85) !important; }
+.tag-g { color: #ffd966 !important; }
+
+/* ═══ HERO SUBTITLE TICKER ═══ */
+.ticker-item { background: rgba(0,180,220,.06) !important; border-color: rgba(0,180,220,.25) !important; color: #00ccff !important; }
+.hero-eyebrow { color: #00ccff !important; text-shadow: 0 0 8px rgba(0,200,255,.4) !important; }
+.hstat-l { color: rgba(0,200,255,.6) !important; }
+.hstat-div { background: rgba(0,180,220,.25) !important; }
+
+/* ═══ FOOTER ═══ */
+footer { border-top-color: rgba(0,180,220,.15) !important; }
+</style>
+
+
+<style id="spacing-v2">
+.section-wrap { padding: 2.8rem 1.5rem !important; }
+#hero { padding-top: 64px !important; padding-bottom: 2rem !important; }
+.arc-div { padding: 0 !important; margin: 0 !important; opacity:.4; }
+.sec-head { margin-bottom: 1.75rem !important; }
+#forge { padding: 2.8rem 0 !important; }
+#contact { padding: 2.8rem 1.5rem !important; }
+.contact-nexus { gap: 1.5rem !important; margin-bottom: 1.5rem !important; }
+.hero-ticker { margin-bottom: 1.25rem !important; }
+.wiki-grid { gap: 1rem !important; }
+.sys-grid { gap: 1.25rem !important; }
+.trait-grid { gap: .75rem !important; }
+.nexus-grid { gap: 1.25rem !important; }
+.tl-item { margin-bottom: 1rem !important; }
+.mbti-bars { margin-top: .9rem !important; }
+footer { padding: 1.25rem 1.5rem !important; }
+.architect-grid { gap: 2.5rem !important; }
+</style>
+
+<style id="spacing-v2">
+.section-wrap{padding:2.8rem 1.5rem!important}
+#hero{padding-top:64px!important;padding-bottom:2rem!important}
+.arc-div{padding:0!important;line-height:1!important;opacity:.35}
+.sec-head{margin-bottom:1.75rem!important}
+#forge{padding:2.8rem 0!important}
+#contact{padding:2.8rem 1.5rem!important}
+.contact-nexus{gap:1.5rem!important;margin-bottom:.5rem!important}
+.hero-ticker{margin-bottom:1.25rem!important}
+.wiki-grid{gap:1rem!important}
+.sys-grid{gap:1.25rem!important}
+.trait-grid{gap:.75rem!important}
+.nexus-grid{gap:1.25rem!important}
+.tl-item{margin-bottom:1rem!important}
+.mbti-bars{margin-top:.9rem!important}
+footer{padding:1.1rem 1.5rem!important}
+.architect-grid{gap:2.5rem!important}
+.hero-inner{gap:3rem!important}
+.hero-bio{margin-bottom:1.25rem!important}
+.hero-ctas{margin-bottom:1.5rem!important}
+</style>
+<style id="btn-forge">
+/* ═══ ARQUEOFUTURIST BUTTONS — FORGED STEEL + SCARLET FIRE ═══ */
+
+/* Primary: "Contact Me" — Scarlet forge with gold edge */
+.btn-gold {
+  position: relative;
+  background: linear-gradient(135deg, #6b0000 0%, #a01010 45%, #8b1a1a 100%) !important;
+  color: #ffd966 !important;
+  font-weight: 700 !important;
+  font-size: .78rem !important;
+  letter-spacing: .22em !important;
+  border: 1px solid rgba(212,160,23,.6) !important;
+  text-shadow: 0 0 8px rgba(255,217,102,.5) !important;
+  box-shadow:
+    0 0 0 1px rgba(192,57,43,.4),
+    0 0 18px rgba(192,57,43,.35),
+    inset 0 1px 0 rgba(255,200,100,.15) !important;
+  clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%) !important;
+  transition: all .25s !important;
+  overflow: visible !important;
+}
+.btn-gold::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(255,150,50,.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+.btn-gold:hover {
+  background: linear-gradient(135deg, #8b1010 0%, #c0392b 45%, #a01a1a 100%) !important;
+  box-shadow:
+    0 0 0 1px rgba(212,160,23,.7),
+    0 0 28px rgba(232,64,64,.55),
+    0 0 55px rgba(192,57,43,.25),
+    inset 0 1px 0 rgba(255,200,100,.2) !important;
+  transform: translateY(-3px) !important;
+  color: #fff !important;
+  text-shadow: 0 0 12px rgba(255,255,255,.6) !important;
+}
+
+/* Secondary: "View Experience" — Cyan terminal with blue neon */
+.btn-outline {
+  position: relative;
+  background: rgba(0,20,40,.7) !important;
+  color: #00e5ff !important;
+  font-weight: 700 !important;
+  font-size: .75rem !important;
+  letter-spacing: .2em !important;
+  border: 1px solid #00aacc !important;
+  text-shadow: 0 0 8px rgba(0,229,255,.55) !important;
+  box-shadow:
+    0 0 0 1px rgba(0,180,220,.2),
+    0 0 16px rgba(0,180,220,.25),
+    inset 0 0 20px rgba(0,100,160,.12) !important;
+  clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%) !important;
+  transition: all .25s !important;
+}
+.btn-outline::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,200,255,.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+.btn-outline:hover {
+  background: rgba(0,40,70,.85) !important;
+  border-color: #00e5ff !important;
+  box-shadow:
+    0 0 0 1px rgba(0,229,255,.5),
+    0 0 30px rgba(0,200,255,.45),
+    0 0 60px rgba(0,150,200,.2),
+    inset 0 0 25px rgba(0,120,180,.15) !important;
+  transform: translateY(-3px) !important;
+  color: #fff !important;
+  text-shadow: 0 0 14px rgba(0,229,255,.8) !important;
+}
+
+/* Scanline glitch shimmer on both buttons */
+@keyframes btn-shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+</style>
+<style id="forge-tabs-neon">
+/* ═══ FORGE TABS — NEON TERMINAL STYLE ═══ */
+.forge-tabs {
+  border-bottom: 1px solid rgba(0,180,220,.3) !important;
+  gap: .35rem !important;
+  padding-bottom: 0 !important;
+}
+.forge-tab {
+  font-family: 'Share Tech Mono', monospace !important;
+  font-size: .68rem !important;
+  letter-spacing: .2em !important;
+  padding: .65rem 1.4rem !important;
+  color: rgba(0,200,255,.5) !important;
+  background: rgba(0,15,30,.6) !important;
+  border: 1px solid rgba(0,180,220,.18) !important;
+  border-bottom: 2px solid transparent !important;
+  margin-bottom: -1px !important;
+  cursor: pointer !important;
+  transition: all .2s !important;
+  clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%) !important;
+}
+.forge-tab:hover {
+  color: #00e5ff !important;
+  background: rgba(0,40,70,.7) !important;
+  border-color: rgba(0,200,255,.4) !important;
+  text-shadow: 0 0 8px rgba(0,229,255,.6) !important;
+  box-shadow: 0 0 14px rgba(0,180,220,.2) !important;
+}
+.forge-tab.active {
+  color: #ffd966 !important;
+  background: rgba(100,30,0,.45) !important;
+  border-color: rgba(212,160,23,.45) !important;
+  border-bottom-color: #c0392b !important;
+  text-shadow: 0 0 10px rgba(255,217,102,.55) !important;
+  box-shadow:
+    0 0 16px rgba(192,57,43,.3),
+    inset 0 0 16px rgba(212,160,23,.06) !important;
+  font-weight: 700 !important;
+}
+</style>
+<style id="forge-tabs-fix">
+.forge-tab {
+  color: rgba(0,220,255,.82) !important;
+  border-color: rgba(0,180,220,.4) !important;
+  background: rgba(0,25,45,.75) !important;
+  text-shadow: 0 0 6px rgba(0,200,255,.35) !important;
+}
+</style>
 </head>
 <body class="preloading">
 
@@ -371,7 +716,7 @@ footer span{color:var(--gold-md)}
           <span class="intj-label" data-en="Assertive Architect" data-es="Arquitecto Asertivo">Assertive Architect</span>
         </div>
         <div class="architect-quote">
-          <p data-en="As an Architect (INTJ-A), my natural focus is system optimization. I possess a combination of strategic vision and technical pragmatism. I do not just execute tasks — I design workflows so that execution is flawless, governed by logic, autonomy, and continuous process improvement. My background bridges the rigorous physical order of Archival Science with the high-velocity demands of modern Global Business Operations and AI Automation." data-es="Como Arquitecto (INTJ-A), mi enfoque natural es la optimización de sistemas. Poseo una combinación de visión estratégica y pragmatismo técnico. No solo ejecuto tareas — diseño flujos de trabajo para que la ejecución sea impecable, gobernada por lógica, autonomía y mejora continua de procesos.">As an Architect (INTJ-A), my natural focus is system optimization. I possess a combination of strategic vision and technical pragmatism. I do not just execute tasks — I design workflows so that execution is flawless, governed by logic, autonomy, and continuous process improvement. My background bridges the rigorous physical order of Archival Science with the high-velocity demands of modern Global Business Operations and AI Automation.</p>
+          <p data-en="I am a self-taught polymath — someone who has built genuine expertise across archival science, electronics, financial markets, linguistics, and AI automation not through formal institutions, but through relentless self-directed study applied to real operational problems. As an Architect (INTJ-A), my natural mode is system optimization: I do not merely execute tasks, I design the logic behind them so that execution becomes flawless, autonomous, and continuously improving. My background bridges the rigorous physical order of Archival Science with the high-velocity demands of modern Global Business Operations and AI Automation — and I thrive at that intersection." data-es="Soy un polímata autodidacta — alguien que ha construido experticia genuina en archivística, electrónica, mercados financieros, lingüística y automatización con IA, no a través de instituciones formales, sino mediante estudio autodisciplinado constante aplicado a problemas operativos reales. Como Arquitecto (INTJ-A), mi modo natural es la optimización de sistemas: no solo ejecuto tareas, diseño la lógica que las sostiene para que la ejecución sea impecable, autónoma y en mejora continua. Mi formación une el orden riguroso de la Archivística con las demandas de alta velocidad de las Operaciones Globales y la Automatización con IA — y es en esa intersección donde mejor opero.">I am a self-taught polymath — someone who has built genuine expertise across archival science, electronics, financial markets, linguistics, and AI automation not through formal institutions, but through relentless self-directed study applied to real operational problems. As an Architect (INTJ-A), my natural mode is system optimization: I do not merely execute tasks, I design the logic behind them so that execution becomes flawless, autonomous, and continuously improving. My background bridges the rigorous physical order of Archival Science with the high-velocity demands of modern Global Business Operations and AI Automation — and I thrive at that intersection.</p>
         </div>
         <div class="mbti-bars">
           <div class="mbti-row"><span class="mbti-l">I</span><div class="mbti-track"><div class="mbti-fill" style="left:0;width:72%"></div></div><span class="mbti-r">E</span></div>
@@ -620,23 +965,23 @@ footer span{color:var(--gold-md)}
         <div class="sys-col reveal">
           <div class="sys-col-title">Operations &amp; Case Mgmt</div>
           <div class="sys-col-sub">The Core</div>
-          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">Customer Success Mgmt</span><span><span class="sys-skill-lvl">ADVANCED</span><span class="sys-skill-pct">85%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:85%"></div></div></div>
-          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">Case Management</span><span><span class="sys-skill-lvl">ADVANCED</span><span class="sys-skill-pct">85%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:85%"></div></div></div>
-          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">SLA Compliance</span><span><span class="sys-skill-lvl">ADVANCED</span><span class="sys-skill-pct">85%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:85%"></div></div></div>
-          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">QA Metrics</span><span><span class="sys-skill-lvl">ADVANCED</span><span class="sys-skill-pct">80%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:80%"></div></div></div>
-          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">Multichannel Support</span><span><span class="sys-skill-lvl">EXPERT</span><span class="sys-skill-pct">90%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:90%"></div></div></div>
-          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">Customer Onboarding</span><span><span class="sys-skill-lvl">ADVANCED</span><span class="sys-skill-pct">80%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:80%"></div></div></div>
+          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">Customer Success Mgmt</span><span><span class="sys-skill-lvl">ADVANCED</span><span class="sys-skill-pct">80%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:80%"></div></div></div>
+          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">Case Management</span><span><span class="sys-skill-lvl">ADVANCED</span><span class="sys-skill-pct">82%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:82%"></div></div></div>
+          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">SLA Compliance</span><span><span class="sys-skill-lvl">ADVANCED</span><span class="sys-skill-pct">82%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:82%"></div></div></div>
+          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">QA Metrics</span><span><span class="sys-skill-lvl">ADVANCED</span><span class="sys-skill-pct">75%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:75%"></div></div></div>
+          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">Multichannel Support</span><span><span class="sys-skill-lvl">EXPERT</span><span class="sys-skill-pct">88%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:88%"></div></div></div>
+          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">Customer Onboarding</span><span><span class="sys-skill-lvl">ADVANCED</span><span class="sys-skill-pct">75%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:75%"></div></div></div>
           <div class="sys-tags"><span class="tag tag-b">CASE MGMT</span><span class="tag tag-b">SLA</span><span class="tag tag-b">QA</span><span class="tag tag-b">AHT</span></div>
         </div>
         <div class="sys-col reveal">
           <div class="sys-col-title">Technology &amp; Automation</div>
           <div class="sys-col-sub">The Iron Branches</div>
-          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">AI Workflow Automation</span><span><span class="sys-skill-lvl">DEVELOPING</span><span class="sys-skill-pct">65%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:65%"></div></div></div>
-          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">Vibe Coding</span><span><span class="sys-skill-lvl">DEVELOPING</span><span class="sys-skill-pct">60%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:60%"></div></div></div>
-          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">ChatGPT / Claude AI Integ.</span><span><span class="sys-skill-lvl">DEVELOPING</span><span class="sys-skill-pct">70%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:70%"></div></div></div>
-          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">CRM Administration</span><span><span class="sys-skill-lvl">ADVANCED</span><span class="sys-skill-pct">85%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:85%"></div></div></div>
-          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">Microsoft Excel (Macros)</span><span><span class="sys-skill-lvl">EXPERT</span><span class="sys-skill-pct">95%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:95%"></div></div></div>
-          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">Notion Architecture</span><span><span class="sys-skill-lvl">ADVANCED</span><span class="sys-skill-pct">80%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:80%"></div></div></div>
+          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">AI Workflow Automation</span><span><span class="sys-skill-lvl">DEVELOPING</span><span class="sys-skill-pct">55%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:55%"></div></div></div>
+          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">Vibe Coding</span><span><span class="sys-skill-lvl">DEVELOPING</span><span class="sys-skill-pct">50%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:50%"></div></div></div>
+          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">ChatGPT / Claude AI Integ.</span><span><span class="sys-skill-lvl">DEVELOPING</span><span class="sys-skill-pct">62%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:62%"></div></div></div>
+          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">CRM Administration</span><span><span class="sys-skill-lvl">ADVANCED</span><span class="sys-skill-pct">80%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:80%"></div></div></div>
+          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">Microsoft Excel (Macros)</span><span><span class="sys-skill-lvl">EXPERT</span><span class="sys-skill-pct">90%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:90%"></div></div></div>
+          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">Notion Architecture</span><span><span class="sys-skill-lvl">ADVANCED</span><span class="sys-skill-pct">72%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:72%"></div></div></div>
           <div class="sys-tags"><span class="tag tag-g">VIBE CODING</span><span class="tag tag-g">AI ORCHESTRATION</span><span class="tag tag-g">AUTOMATION</span></div>
         </div>
         <div class="sys-col reveal">
@@ -644,9 +989,9 @@ footer span{color:var(--gold-md)}
           <div class="sys-col-sub">The Roots</div>
           <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">Information Governance</span><span><span class="sys-skill-lvl">EXPERT</span><span class="sys-skill-pct">92%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:92%"></div></div></div>
           <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">Records Management</span><span><span class="sys-skill-lvl">EXPERT</span><span class="sys-skill-pct">95%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:95%"></div></div></div>
-          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">HIPAA Compliance</span><span><span class="sys-skill-lvl">DEVELOPING</span><span class="sys-skill-pct">65%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:65%"></div></div></div>
-          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">PII Data Privacy</span><span><span class="sys-skill-lvl">ADVANCED</span><span class="sys-skill-pct">85%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:85%"></div></div></div>
-          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">Legal Document Admin</span><span><span class="sys-skill-lvl">ADVANCED</span><span class="sys-skill-pct">85%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:85%"></div></div></div>
+          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">HIPAA Compliance</span><span><span class="sys-skill-lvl">DEVELOPING</span><span class="sys-skill-pct">55%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:55%"></div></div></div>
+          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">PII Data Privacy</span><span><span class="sys-skill-lvl">ADVANCED</span><span class="sys-skill-pct">78%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:78%"></div></div></div>
+          <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">Legal Document Admin</span><span><span class="sys-skill-lvl">ADVANCED</span><span class="sys-skill-pct">80%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:80%"></div></div></div>
           <div class="sys-skill"><div class="sys-skill-head"><span class="sys-skill-name">Archival Science (ISAD-G)</span><span><span class="sys-skill-lvl">EXPERT</span><span class="sys-skill-pct">93%</span></span></div><div class="sys-bar"><div class="sys-fill" style="width:93%"></div></div></div>
           <div class="sys-tags"><span class="tag tag-r">INFORMATION GOVERNANCE</span><span class="tag tag-r">RECORDS MGMT</span></div>
         </div>
@@ -755,21 +1100,14 @@ footer span{color:var(--gold-md)}
   <div class="contact-inner">
     <p style="font-family:'Share Tech Mono',monospace;font-size:.6rem;color:var(--ice);letter-spacing:.3em;text-transform:uppercase;margin-bottom:.6rem">// communication nexus</p>
     <h2 class="contact-title reveal">Transmit Signal</h2>
-    <p class="contact-sub reveal">Available for remote roles compatible with EST/COT. Customer Success · Operations · Case Management · AI Automation.</p>
+    <p class="contact-sub reveal">Available for remote roles compatible with EST/COT. Reach directly via any channel below — encrypted communication preferred.</p>
     <div class="contact-nexus reveal">
       <a class="cn-item" href="mailto:mendiar88@proton.me"><span class="cn-icon">✉️</span><span class="cn-label">Email</span><span class="cn-val">mendiar88@proton.me</span></a>
+      <a class="cn-item" href="https://signal.me/#p/+573133339924" target="_blank" rel="noopener"><span class="cn-icon">🔒</span><span class="cn-label">Signal</span><span class="cn-val">+57 313 333 9924</span></a>
       <a class="cn-item" href="https://wa.me/573133339924" target="_blank" rel="noopener"><span class="cn-icon">📱</span><span class="cn-label">WhatsApp</span><span class="cn-val">+57 313 333 9924</span></a>
       <a class="cn-item" href="https://www.linkedin.com/in/mendiar88" target="_blank" rel="noopener"><span class="cn-icon">🔗</span><span class="cn-label">LinkedIn</span><span class="cn-val">linkedin.com/in/mendiar88</span></a>
     </div>
-    <div class="transmit-form reveal">
-      <div class="form-title">Transmit Signal</div>
-      <div class="form-sub">Secure Communication Channel</div>
-      <div class="form-group"><label class="form-label">Designation</label><input type="text" class="form-input" id="fName" placeholder="Enter designation..."></div>
-      <div class="form-group"><label class="form-label">Signal Address</label><input type="email" class="form-input" id="fEmail" placeholder="Enter signal address..."></div>
-      <div class="form-group"><label class="form-label">Transmission</label><textarea class="form-textarea" id="fMsg" placeholder="Compose transmission..."></textarea></div>
-      <button class="btn-transmit" onclick="transmit()"><span>✈</span><span>TRANSMIT</span></button>
-      <div id="transmitMsg" style="display:none;margin-top:1rem;text-align:center;font-family:'Share Tech Mono',monospace;font-size:.7rem;color:var(--ice);letter-spacing:.1em"></div>
-    </div>
+    
   </div>
 </section>
 
@@ -826,26 +1164,6 @@ document.getElementById('langToggle').addEventListener('click',function(){
   });
 });
 
-// FORM
-function transmit(){
-  const n=document.getElementById('fName').value;
-  const e=document.getElementById('fEmail').value;
-  const m=document.getElementById('fMsg').value;
-  const msg=document.getElementById('transmitMsg');
-  if(!n||!e||!m){msg.style.display='block';msg.style.color='var(--flame)';msg.textContent='[ ERROR: ALL FIELDS REQUIRED ]';return}
-  msg.style.display='block';msg.style.color='var(--ice)';
-  msg.textContent='[ SIGNAL TRANSMITTED — RESPONSE INCOMING... ]';
-  setTimeout(()=>{window.location.href='mailto:mendiar88@proton.me?subject=Signal from '+encodeURIComponent(n)+'&body='+encodeURIComponent(m)+'%0A%0AFrom: '+encodeURIComponent(e);},600);
-}
-
-// NAV ACTIVE
-const secs=document.querySelectorAll('section[id]');
-const nls=document.querySelectorAll('.nav-links a');
-window.addEventListener('scroll',()=>{
-  let cur='';
-  secs.forEach(s=>{if(window.scrollY>=s.offsetTop-70)cur=s.id});
-  nls.forEach(a=>{a.style.color=a.getAttribute('href')==='#'+cur?'var(--gold-br)':''});
-},{passive:true});
 </script>
 </body>
 </html>
